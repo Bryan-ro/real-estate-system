@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(uuid())
+  name String
+  email String @unique
+  telephone String @db.VarChar(11) @unique
+  password String
+
+  @@map("users")
+}
+
+model Immobile {
+  id String @id @default(uuid())
+  contractType contractType
+  category ImobilesCategory
+  area Float
+  quantBedrooms Int
+  bathrooms Int
+  garage Boolean
+  price Decimal @db.Decimal(10, 2)
+  description String? @db.LongText
+  adress Adress @relation(fields: [adressId], references: [id])
+  adressId String @unique
+  @@map("imobiles")
+}       
+
+model Adress {
+  id String @id @default(uuid())
+  street String
+  number Int
+  city String
+  state String
+  postalCode String
+  immobile Immobile?
+}
+
+enum ImobilesCategory {
+  HOUSE 
+  APARTAMENT
+  GROUND
+}
+
+enum contractType {
+  SALE
+  RENT
+}
