@@ -11,42 +11,81 @@ datasource db {
 }
 
 model User {
-  id String @id @default(uuid())
-  name String
-  email String @unique
-  telephone String @db.VarChar(11) @unique
-  password String
+  id        String         @id @default(uuid())
+  name      String
+  email     String         @unique
+  telephone String         @unique @db.VarChar(11)
+  password  String
+  role Roles
+  favorites UserFavorite[]
 
   @@map("users")
 }
 
 model Immobile {
-  id String @id @default(uuid())
+  id           String           @id @default(uuid())
   contractType contractType
-  category ImobilesCategory
-  area Float
-  quantBedrooms Int
-  bathrooms Int
-  garage Boolean
-  price Decimal @db.Decimal(10, 2)
-  description String? @db.LongText
-  adress Adress @relation(fields: [adressId], references: [id])
-  adressId String @unique
-  @@map("imobiles")
-}       
+  category     ImobilesCategory
+  price        Decimal          @db.Decimal(10, 2)
+  highlights   Boolean          @default(false)
+  propertyId   String           @unique
+  adressId     String           @unique
 
-model Adress {
-  id String @id @default(uuid())
-  street String
-  number Int
-  city String
-  state String
-  postalCode String
+  property       ImmobileProperty @relation(fields: [propertyId], references: [id])
+  adress         Adress           @relation(fields: [adressId], references: [id])
+  images         Image[]
+  favorites UserFavorite[]
+
+  @@map("immobiles")
+}
+
+model ImmobileProperty {
+  id             String  @id @default(uuid())
+  area           Float
+  quantBedrooms  Int     @default(0)
+  quantBathrooms Int     @default(0)
+  garage         Boolean @default(false)
+  description    String? @db.LongText
+
   immobile Immobile?
 }
 
+model Adress {
+  id         String @id @default(uuid())
+  street     String
+  number     Int
+  city       String
+  state      String
+  postalCode String @db.VarChar(8)
+
+  immobile Immobile?
+}
+
+model Image {
+  id         String   @id @default(uuid())
+  image      Bytes    @db.Blob
+  Immobile   Immobile @relation(fields: [immobileId], references: [id])
+  immobileId String
+
+  @@map("images")
+}
+
+model UserFavorite {
+  id String @id @default(uuid())
+  user User @relation(fields: [userId], references: [id])
+  immobile Immobile @relation(fields: [immobileId], references:[id])
+  immobileId String
+  userId String
+}
+
+enum Roles {
+  MASTER
+  REALTOR
+  USER
+}
+
 enum ImobilesCategory {
-  HOUSE 
+  HOUSE
   APARTAMENT
   GROUND
 }
