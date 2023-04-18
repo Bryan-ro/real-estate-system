@@ -1,7 +1,7 @@
-import express, { request } from 'express';
+import express from 'express';
+import router from './routes/index';
 
 const app = express();
 app.use(express.json());
-
-
-app.listen(4444, () => console.log("Server listening on port 4444"))
+router(app);
+app.listen(4444, () => console.log("Server listening on port 4444"));
