@@ -4,6 +4,6 @@ const router = Router();
 
 class UserController {
     private _login(req: Request, res: Response) {
-
+        return "";
     }
 }
