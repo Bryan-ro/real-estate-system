@@ -1,0 +1,3 @@
+interface errors {
+    message: string;
+}

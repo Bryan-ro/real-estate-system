@@ -15,7 +15,7 @@ export class User extends UserPropsValitations {
         super();
     }
 
-    public static async getUserByEmail(emailOrTel: string) {
+    public static async getUserByEmailOrTelephone(emailOrTel: string) {
         const data = await prisma.user.findFirst({
             where: {
                 OR: [
@@ -32,31 +32,30 @@ export class User extends UserPropsValitations {
                 ]
             },
             select: {
+                id: true,
                 name: true,
                 email: true,
                 telephone: true,
+                role: true
             }
         });
-
+        if (!data) {
+            throw new Error("Invalid credentials. Please check your login and password.");
+        }
         return data;
     }
 
     public async createUser(): Promise<void> {
-        const validations = this._validadeUserProps();
-
-        if(validations) {
-            await prisma.user.create({
-                data: {
-                    name: this._name,
-                    email: this._email,
-                    telephone: this._telephone,
-                    password: await auth.hashPassword(this._password),
-                    role: this._role
-                }
-            });
-        } else {
-            throw new Error("Not validated fields");
-        }
+        this._validadeUserProps();
+        await prisma.user.create({
+            data: {
+                name: this._name,
+                email: this._email,
+                telephone: this._telephone,
+                password: await auth.hashPassword(this._password),
+                role: this._role
+            }
+        });
     }
 
     public async login(): Promise<string | void> {
@@ -76,18 +75,15 @@ export class User extends UserPropsValitations {
                     email: data.email,
                     telephone: data.telephone
                 });
-            }
+            } else throw new Error("Invalid credentials. Please check your login and password.");
 
-        }
+        } else throw new Error("Invalid credentials. Please check your login and password.");
     }
 
-    private _validadeUserProps(): boolean {
-        if (this.validateName(this._name) &&
-        this.validateEmail(this._email) &&
-        this.validateTelephone(this._telephone) &&
-        this.validatePassword(this._telephone)) {
-            return true;
-        } else return false;
+    private _validadeUserProps() {
+        this.validateEmail(this._email);
+        this.validateTelephone(this._telephone);
+        this.validatePassword(this._password);
 
     }
 }
