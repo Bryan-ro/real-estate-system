@@ -19,7 +19,7 @@ export class UserController {
 
                 const token = await user.login();
 
-                return res.status(200).json({ token });
+                return res.status(200).json({ authorization: token });
             }
         } catch (err) {
             const { message } = err as errors;

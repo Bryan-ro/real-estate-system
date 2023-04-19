@@ -1,0 +1,12 @@
+
+[-] Request: POST /user/auth/login at Wed Apr 19 2023 18:45:00 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "cintia@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2341.552 ms 

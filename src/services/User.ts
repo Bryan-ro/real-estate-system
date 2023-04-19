@@ -1,10 +1,10 @@
 import { PrismaClient } from "@prisma/client";
 import { Auth } from "../utils/AuthUtils";
-import { UserPropsValitations } from "../validations/UserPropsValidations";
+import { UserPropsValidations } from "../validations/UserPropsValidations";
 const prisma = new PrismaClient();
 const auth = new Auth();
 
-export class User extends UserPropsValitations {
+export class User extends UserPropsValidations {
     constructor(
 		private _name: string,
 		private _email: string,
@@ -80,10 +80,10 @@ export class User extends UserPropsValitations {
         } else throw new Error("Invalid credentials. Please check your login and password.");
     }
 
-    private _validadeUserProps() {
+    private _validadeUserProps(): void {
+        this.validateName(this._name);
         this.validateEmail(this._email);
         this.validateTelephone(this._telephone);
         this.validatePassword(this._password);
-
     }
 }

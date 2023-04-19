@@ -1,8 +1,9 @@
-export abstract class UserPropsValitations {
-    protected validateName(name: string): boolean {
+export abstract class UserPropsValidations {
+    protected validateName(name: string): void {
         const regex = /^[a-zA-ZÀ-ú\s]+$/;
 
-        return regex.test(name);
+        const test = regex.test(name);
+        if (!test) throw new Error("Invalid name. The name cannot contain numbers or special characters.");
     }
 
     protected validateEmail(email: string): void {
