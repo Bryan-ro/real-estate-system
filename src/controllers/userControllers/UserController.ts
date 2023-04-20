@@ -5,7 +5,7 @@ const router = Router();
 
 export class UserController {
     public routes() {
-        router.post("/create", this.createUser);
+        router.post("/create", this._createUser);
         router.post("/auth/login", this._login);
         return router;
     }
@@ -27,7 +27,7 @@ export class UserController {
         }
     }
 
-    private async createUser(req: Request, res: Response) {
+    private async _createUser(req: Request, res: Response) {
         const { name, email, telephone, password } = req.body;
         try {
             const user = new User(name, email, telephone, password, "USER");

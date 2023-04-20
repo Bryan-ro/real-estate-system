@@ -6,43 +6,20 @@ const auth = new Auth();
 
 export class User extends UserPropsValidations {
     constructor(
-		private _name: string,
-		private _email: string,
-		private _telephone: string,
-		private _password: string,
-		private _role: "USER" | "REALTOR" = "USER"
-    ){
+        private _name: string,
+        private _email: string,
+        private _telephone: string,
+        private _password: string,
+        private _role: "USER" | "REALTOR" = "USER"
+    ) {
         super();
     }
 
-    public static async getUserByEmailOrTelephone(emailOrTel: string) {
-        const data = await prisma.user.findFirst({
-            where: {
-                OR: [
-                    {
-                        email: {
-                            equals: emailOrTel
-                        }
-                    },
-                    {
-                        telephone: {
-                            equals: emailOrTel
-                        }
-                    }
-                ]
-            },
-            select: {
-                id: true,
-                name: true,
-                email: true,
-                telephone: true,
-                role: true
-            }
-        });
-        if (!data) {
-            throw new Error("Invalid credentials. Please check your login and password.");
-        }
-        return data;
+    private _validadeUserProps(): void {
+        this.validateName(this._name);
+        this.validateEmail(this._email);
+        this.validateTelephone(this._telephone);
+        this.validatePassword(this._password);
     }
 
     public async createUser(): Promise<void> {
@@ -80,10 +57,107 @@ export class User extends UserPropsValidations {
         } else throw new Error("Invalid credentials. Please check your login and password.");
     }
 
-    private _validadeUserProps(): void {
-        this.validateName(this._name);
-        this.validateEmail(this._email);
-        this.validateTelephone(this._telephone);
-        this.validatePassword(this._password);
+    public static async getUserByEmailOrTelephone(emailOrTel: string) {
+        const data = await prisma.user.findFirst({
+            where: {
+                OR: [
+                    {
+                        email: {
+                            equals: emailOrTel
+                        }
+                    },
+                    {
+                        telephone: {
+                            equals: emailOrTel
+                        }
+                    }
+                ]
+            },
+            select: {
+                id: true,
+                name: true,
+                email: true,
+                telephone: true,
+                role: true
+            }
+        });
+        if (!data) {
+            throw new Error("Invalid credentials. Please check your login and password.");
+        }
+        return data;
+    }
+
+    public static async getOneTypeOfUsers(role: "USER" | "REALTOR", name?: string, email?: string, telephone?: string) {
+        const data = await prisma.user.findMany({
+            where: {
+                AND: [
+                    { role },
+                    {
+                        AND: [
+                            {
+                                email: {
+                                    contains: email
+                                }
+                            },
+                            {
+                                telephone: {
+                                    contains: telephone
+                                }
+                            },
+                            {
+                                name: {
+                                    contains: name
+                                }
+                            }
+                        ]
+                    }
+                ]
+
+            },
+            select: {
+                id: true,
+                name: true,
+                email: true,
+                telephone: true,
+                role: true
+            }
+        });
+
+        return data;
+    }
+
+    public static async getOneUser(id: string) {
+        const data = await prisma.user.findUnique({
+            where: {
+                id
+            }, select: {
+                id: true,
+                name: true,
+                email: true,
+                telephone: true,
+                role: true
+            }
+        }).catch(() => {
+            throw new Error("The 'userId' parameter is required and must be provided.");
+        });
+
+        return data;
+
+
+    }
+
+    public async updateUser(id: string) {
+        this._validadeUserProps();
+
+        await prisma.user.update({
+            where: {
+                id
+            },
+            data: {
+                name: this._name,
+                email: this._email,
+                telephone: this._telephone
+            }
+        });
     }
 }

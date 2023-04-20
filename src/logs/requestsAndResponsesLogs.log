@@ -1,12 +1,748 @@
 
-[-] Request: POST /user/auth/login at Wed Apr 19 2023 18:45:00 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request: POST /user/auth/login at Wed Apr 19 2023 23:55:11 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
 [-] Request Body:
 {
-	"email": "cintia@gmail.com",
+	"email": "bryangomesrocha@gmail.com",
 	"password": "[FILTERED]"
 }
 [-] Response Body:
 {
 	"authorization": "[FILTERED]"
 }
-[-] Response: 200 2341.552 ms 
+[-] Response: 200 2321.760 ms 
+
+[-] Request: GET /managemanagement/users/info at Thu Apr 20 2023 00:06:50 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "Token not provided."
+}
+[-] Response: 401 2.458 ms 
+
+[-] Request: GET /managemanagement/users/info at Thu Apr 20 2023 00:07:59 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response: - - ms 
+
+[-] Request: GET /managemanagement/users/info at Thu Apr 20 2023 00:10:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "The 'UserId' parameter is required and must be provided."
+}
+[-] Response: 400 43.721 ms 
+
+[-] Request: GET /managemanagement/users/info?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 00:10:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"password": "[FILTERED]",
+		"role": "USER"
+	}
+}
+[-] Response: 200 47.352 ms 
+
+[-] Request: GET /managemanagement/users/info?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 00:11:25 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.findUnique()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:88:40\n\n  85 }\n  86 \n  87 public static async getOneUser(id: string) {\n→ 88     const data = await prisma.user.findUnique({\n           where: {\n             id: 'a9b23be6-6ea8-4bed-a19a-38b8ef8e9333'\n           },\n           select: {\n         ?   password?: true,\n         ?   id?: true,\n         ?   name?: true,\n         ?   email?: true,\n         ?   telephone?: true,\n         ?   role?: true,\n         ?   favorites?: true,\n         ?   _count?: true\n           }\n         })\n\n\nThe `select` statement for type User needs at least one truthy value.\n"
+}
+[-] Response: 500 106.864 ms 
+
+[-] Request: GET /managemanagement/users/info?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 00:12:11 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"role": "USER"
+	}
+}
+[-] Response: 200 43.750 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 00:50:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"password": "[FILTERED]",
+		"role": "USER",
+		"favorites": []
+	}
+}
+[-] Response: 200 51.904 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 00:52:32 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"password": "[FILTERED]",
+		"role": "USER",
+		"favorites": []
+	}
+}
+[-] Response: 200 7.203 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 00:52:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"password": "[FILTERED]",
+		"role": "USER",
+		"favorites": []
+	}
+}
+[-] Response: 200 6.282 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 00:54:52 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"password": "[FILTERED]",
+		"role": "USER",
+		"favorites": []
+	}
+}
+[-] Response: 200 48.653 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 00:55:13 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"password": "[FILTERED]",
+		"role": "USER",
+		"favorites": [
+			{
+				"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobileId": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+				"userId": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobile": {
+					"id": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+					"contractType": "SALE",
+					"category": "HOUSE",
+					"price": "100000",
+					"highlights": false,
+					"propertyId": "2037196e-fc09-4337-a195-60a976090356",
+					"adressId": "7373962e-5f27-42f6-ada8-2f3b98757164"
+				}
+			}
+		]
+	}
+}
+[-] Response: 200 8.648 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 01:02:18 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.findUnique()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:130:40\n\n  127 }\n  128 \n  129 public static async getOneUser(id: string) {\n→ 130     const data = await prisma.user.findUnique({\n            where: {\n              id: 'a9b23be6-6ea8-4bed-a19a-38b8ef8e9333'\n            },\n            include: {\n            ~~~~~~~\n              favorites: {\n                select: {\n                  immobile: true\n                },\n                include: {\n                  immobile: true\n                }\n              }\n            }\n          })\n\n\nPlease either use `include` or `select`, but not both at the same time.\n"
+}
+[-] Response: 500 108.617 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 01:02:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"password": "[FILTERED]",
+		"role": "USER",
+		"favorites": [
+			{
+				"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobileId": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+				"userId": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobile": {
+					"id": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+					"contractType": "SALE",
+					"category": "HOUSE",
+					"price": "100000",
+					"highlights": false,
+					"propertyId": "2037196e-fc09-4337-a195-60a976090356",
+					"adressId": "7373962e-5f27-42f6-ada8-2f3b98757164"
+				}
+			}
+		]
+	}
+}
+[-] Response: 200 46.462 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 01:09:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"password": "[FILTERED]",
+		"role": "USER",
+		"favorites": [
+			{
+				"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobileId": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+				"userId": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobile": {
+					"id": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+					"contractType": "SALE",
+					"category": "HOUSE",
+					"price": "100000",
+					"highlights": false,
+					"propertyId": "2037196e-fc09-4337-a195-60a976090356",
+					"adressId": "7373962e-5f27-42f6-ada8-2f3b98757164"
+				}
+			}
+		]
+	}
+}
+[-] Response: 200 48.704 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 01:28:00 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"role": "USER",
+		"favorites": [
+			{
+				"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobileId": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+				"userId": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobile": {
+					"id": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+					"contractType": "SALE",
+					"category": "HOUSE",
+					"price": "100000",
+					"highlights": false,
+					"propertyId": "2037196e-fc09-4337-a195-60a976090356",
+					"adressId": "7373962e-5f27-42f6-ada8-2f3b98757164"
+				}
+			}
+		]
+	}
+}
+[-] Response: 200 56.976 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9331 at Thu Apr 20 2023 01:29:56 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response: 200 44.136 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9331 at Thu Apr 20 2023 01:31:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": null
+}
+[-] Response: 200 44.052 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9331 at Thu Apr 20 2023 01:34:56 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.findUnique()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:130:40\n\n  127 }\n  128 \n  129 public static async getOneUser(id: string) {\n→ 130     const data = await prisma.user.findUnique({\n            where: {\n              id: 'a9b23be6-6ea8-4bed-a19a-38b8ef8e9331'\n            },\n            include: {\n            ~~~~~~~\n              favorites: {\n                select: {\n                  immobile: true\n                },\n                include: {\n                  immobile: true\n                }\n              }\n            }\n          })\n\n\nPlease either use `include` or `select`, but not both at the same time.\n"
+}
+[-] Response: 500 105.057 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 01:34:59 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.findUnique()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:130:40\n\n  127 }\n  128 \n  129 public static async getOneUser(id: string) {\n→ 130     const data = await prisma.user.findUnique({\n            where: {\n              id: 'a9b23be6-6ea8-4bed-a19a-38b8ef8e9333'\n            },\n            include: {\n            ~~~~~~~\n              favorites: {\n                select: {\n                  immobile: true\n                },\n                include: {\n                  immobile: true\n                }\n              }\n            }\n          })\n\n\nPlease either use `include` or `select`, but not both at the same time.\n"
+}
+[-] Response: 500 46.019 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 01:35:00 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.findUnique()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:130:40\n\n  127 }\n  128 \n  129 public static async getOneUser(id: string) {\n→ 130     const data = await prisma.user.findUnique({\n            where: {\n              id: 'a9b23be6-6ea8-4bed-a19a-38b8ef8e9333'\n            },\n            include: {\n            ~~~~~~~\n              favorites: {\n                select: {\n                  immobile: true\n                },\n                include: {\n                  immobile: true\n                }\n              }\n            }\n          })\n\n\nPlease either use `include` or `select`, but not both at the same time.\n"
+}
+[-] Response: 500 59.680 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 01:36:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"role": "USER",
+		"favorites": [
+			{
+				"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobileId": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+				"userId": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobile": {
+					"id": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+					"contractType": "SALE",
+					"category": "HOUSE",
+					"price": "100000",
+					"highlights": false,
+					"propertyId": "2037196e-fc09-4337-a195-60a976090356",
+					"adressId": "7373962e-5f27-42f6-ada8-2f3b98757164"
+				}
+			}
+		]
+	}
+}
+[-] Response: 200 55.848 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 01:42:25 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.findUnique()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:130:40\n\n  127 }\n  128 \n  129 public static async getOneUser(id: string) {\n→ 130     const data = await prisma.user.findUnique({\n            where: {\n              id: 'a9b23be6-6ea8-4bed-a19a-38b8ef8e9333'\n            },\n            include: {\n            ~~~~~~~\n              favorites: {\n                select: {\n                  immobile: true\n                },\n                include: {\n                  immobile: true\n                }\n              }\n            }\n          })\n\n\nPlease either use `include` or `select`, but not both at the same time.\n"
+}
+[-] Response: 500 108.697 ms 
+
+[-] Request: GET /managemanagement/users/profile?userId=a9b23be6-6ea8-4bed-a19a-38b8ef8e9333 at Thu Apr 20 2023 01:46:18 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": {
+		"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+		"name": "Lucas Hype",
+		"email": "lucas@gmail.com",
+		"telephone": "1199999999",
+		"role": "USER",
+		"favorites": [
+			{
+				"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobileId": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+				"userId": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+				"immobile": {
+					"id": "5f09e7d3-9302-43be-acfa-55cdbbce711c",
+					"contractType": "SALE",
+					"category": "HOUSE",
+					"price": "100000",
+					"highlights": false,
+					"propertyId": "2037196e-fc09-4337-a195-60a976090356",
+					"adressId": "7373962e-5f27-42f6-ada8-2f3b98757164"
+				}
+			}
+		]
+	}
+}
+[-] Response: 200 49.319 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:13:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "Token not provided."
+}
+[-] Response: 401 2.496 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:14:04 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "Token not provided."
+}
+[-] Response: 401 2.437 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:14:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.update()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:146:27\n\n  143 }\n  144 \n  145 public static async updateUser(id: string, name?: string, email?: string, telephone?: string, password?: string) {\n→ 146     await prisma.user.update({\n            where: {\n          ?   id?: String,\n          ?   email?: String,\n          ?   telephone?: String\n            },\n            data: {\n              name: undefined,\n              email: undefined,\n              telephone: undefined,\n              password: '$2b$15$apbk1wudKhVBaJHEUAQJeOJg27LC0uFVXhSu0ONfFvY1l1f7cg4Fy'\n            }\n          })\n\nArgument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.\n\nNote: Lines with ? are optional.\n"
+}
+[-] Response: 500 2412.370 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:23:32 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.findUnique()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:130:40\n\n  127 }\n  128 \n  129 public static async getOneUser(id: string) {\n→ 130     const data = await prisma.user.findUnique({\n            where: {\n          ?   id?: String,\n          ?   email?: String,\n          ?   telephone?: String\n            },\n            select: {\n              id: true,\n              name: true,\n              email: true,\n              telephone: true\n            }\n          })\n\nArgument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.\n\nNote: Lines with ? are optional.\n"
+}
+[-] Response: 500 120.926 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:27:07 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.findUnique()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:130:40\n\n  127 }\n  128 \n  129 public static async getOneUser(id: string) {\n→ 130     const data = await prisma.user.findUnique({\n            where: {\n          ?   id?: String,\n          ?   email?: String,\n          ?   telephone?: String\n            },\n            select: {\n              id: true,\n              name: true,\n              email: true,\n              telephone: true\n            }\n          })\n\nArgument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.\n\nNote: Lines with ? are optional.\n"
+}
+[-] Response: 500 133.044 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:27:10 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.findUnique()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:130:40\n\n  127 }\n  128 \n  129 public static async getOneUser(id: string) {\n→ 130     const data = await prisma.user.findUnique({\n            where: {\n          ?   id?: String,\n          ?   email?: String,\n          ?   telephone?: String\n            },\n            select: {\n              id: true,\n              name: true,\n              email: true,\n              telephone: true\n            }\n          })\n\nArgument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.\n\nNote: Lines with ? are optional.\n"
+}
+[-] Response: 500 48.359 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:27:13 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "\nInvalid `prisma.user.findUnique()` invocation in\nc:\\Users\\Bryan\\Desktop\\Programacao\\HTML-CSS-JS\\Em desenvolvimento\\sitemaImobiliario\\src\\services\\User.ts:130:40\n\n  127 }\n  128 \n  129 public static async getOneUser(id: string) {\n→ 130     const data = await prisma.user.findUnique({\n            where: {\n          ?   id?: String,\n          ?   email?: String,\n          ?   telephone?: String\n            },\n            select: {\n              id: true,\n              name: true,\n              email: true,\n              telephone: true\n            }\n          })\n\nArgument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.\n\nNote: Lines with ? are optional.\n"
+}
+[-] Response: 500 49.676 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:27:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "The 'userId' parameter is required and must be provided."
+}
+[-] Response: 500 132.028 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:28:37 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "The 'userId' parameter is required and must be provided."
+}
+[-] Response: 500 112.243 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:29:16 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 11.462 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name&email at Thu Apr 20 2023 02:29:24 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@outlook.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		},
+		{
+			"id": "67975253-fb8e-4bcf-83a5-796dc4c67fbe",
+			"name": "Cintia",
+			"email": "teste@gmail.com",
+			"telephone": "1196096085",
+			"role": "REALTOR"
+		},
+		{
+			"id": "ff27425d-2620-4590-81da-e28a4f14f76b",
+			"name": "Cintia",
+			"email": "cintia@gmail.com",
+			"telephone": "1199667794",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 6.437 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name&email at Thu Apr 20 2023 02:29:27 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@outlook.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		},
+		{
+			"id": "67975253-fb8e-4bcf-83a5-796dc4c67fbe",
+			"name": "Cintia",
+			"email": "teste@gmail.com",
+			"telephone": "1196096085",
+			"role": "REALTOR"
+		},
+		{
+			"id": "ff27425d-2620-4590-81da-e28a4f14f76b",
+			"name": "Cintia",
+			"email": "cintia@gmail.com",
+			"telephone": "1199667794",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 6.275 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name&email at Thu Apr 20 2023 02:29:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@outlook.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		},
+		{
+			"id": "67975253-fb8e-4bcf-83a5-796dc4c67fbe",
+			"name": "Cintia",
+			"email": "teste@gmail.com",
+			"telephone": "1196096085",
+			"role": "REALTOR"
+		},
+		{
+			"id": "ff27425d-2620-4590-81da-e28a4f14f76b",
+			"name": "Cintia",
+			"email": "cintia@gmail.com",
+			"telephone": "1199667794",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 4.865 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name&email at Thu Apr 20 2023 02:32:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@outlook.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		},
+		{
+			"id": "67975253-fb8e-4bcf-83a5-796dc4c67fbe",
+			"name": "Cintia",
+			"email": "teste@gmail.com",
+			"telephone": "1196096085",
+			"role": "REALTOR"
+		},
+		{
+			"id": "ff27425d-2620-4590-81da-e28a4f14f76b",
+			"name": "Cintia",
+			"email": "cintia@gmail.com",
+			"telephone": "1199667794",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 44.015 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:32:37 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 8.503 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:32:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 47.658 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:33:03 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea58"
+}
+[-] Response Body:
+{
+	"error": "The user are not a realtor"
+}
+[-] Response: 500 5.385 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:33:07 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 7.439 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:33:13 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 45.689 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:33:16 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93e5c8"
+}
+[-] Response Body:
+{
+	"error": "The user are not a realtor"
+}
+[-] Response: 400 5.248 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:33:19 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 8.105 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name=Gu&email at Thu Apr 20 2023 02:33:28 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@outlook.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 6.297 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:34:05 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333"
+}
+[-] Response Body:
+{
+	"error": "The user are not a realtor"
+}
+[-] Response: 400 4.779 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:34:09 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 5.356 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:41:12 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"email": "gustavo"
+}
+[-] Response Body:
+{
+	"error": "Invalid email address. Please provide a valid email address in the format example@example.com."
+}
+[-] Response: 400 44.297 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:41:40 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 400 6.524 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:42:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 47.741 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:43:07 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 8.356 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name=Gu&email at Thu Apr 20 2023 02:43:15 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@outlook.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 6.117 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:43:36 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"email": "gustavo@"
+}
+[-] Response Body:
+{
+	"error": "Invalid email address. Please provide a valid email address in the format example@example.com."
+}
+[-] Response: 400 5.068 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 02:43:41 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"email": "gustavo@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 8.724 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name=Gu&email at Thu Apr 20 2023 02:43:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@gmail.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 4.376 ms 

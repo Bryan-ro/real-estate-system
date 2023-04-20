@@ -5,8 +5,12 @@ import { PrismaClientKnownRequestError, PrismaClientValidationError } from "@pri
 const router = Router();
 
 export class MasterController extends AuthMiddleware {
-    public routes() {
+    public routes(): Router {
+        router.get("/get-all/realtor", this.verifyIfUserIsAuthenticated, this.verifyIfUserIsMaster, this._viewAllRealtorUsers);
+        router.get("/get-all/user", this.verifyIfUserIsAuthenticated, this.verifyIfUserIsMaster, this._viewAllUsers);
+        router.get("/profile", this.verifyIfUserIsAuthenticated, this.verifyIfUserIsMaster, this._getUniqueUser);
         router.post("/create/realtor", this.verifyIfUserIsAuthenticated, this.verifyIfUserIsMaster, this._createRealtorUser);
+        router.put("/update-profile/realtor", this.verifyIfUserIsAuthenticated, this.verifyIfUserIsMaster, this._updateRealtorPersonalInfos);
         return router;
     }
 
@@ -32,6 +36,66 @@ export class MasterController extends AuthMiddleware {
             } else {
                 res.status(500).json({ message: "Uncknow error" });
             }
+        }
+    }
+
+    private async _viewAllRealtorUsers(req: Request, res: Response) {
+        const { name, email, telephone } = req.query;
+
+        try {
+            const data = await User.getOneTypeOfUsers("REALTOR", name?.toString(), email?.toString(), telephone?.toString());
+
+            return res.status(200).json({ data });
+        } catch (err) {
+            return res.status(500).json({ error: (err as errors).message });
+        }
+    }
+
+    private async _viewAllUsers(req: Request, res: Response) {
+        const { name, email, telephone } = req.query;
+
+        try {
+            const data = await User.getOneTypeOfUsers("USER", name?.toString(), email?.toString(), telephone?.toString());
+
+            return res.status(200).json({ data });
+        } catch (err) {
+            return res.status(500).json({ error: (err as errors).message });
+        }
+    }
+
+    private async _getUniqueUser(req: Request, res: Response) {
+        const { userId } = req.query;
+
+        try {
+            if(typeof userId === "string") {
+                const data = await User.getOneUser(userId);
+
+                return res.status(200).json({ data });
+
+            } else throw new Error("The 'userId' parameter is required and must be provided.");
+
+        } catch (err) {
+            return res.status(500).json({ error: (err as errors).message });
+        }
+    }
+
+    private async _updateRealtorPersonalInfos(req: Request, res: Response) {
+        const { userId, name, email, telephone } = req.body;
+
+        try {
+            const data = await User.getOneUser(userId);
+            if(data?.role === "REALTOR") {
+                const user = new User(name ?? data.name, email ?? data.email, telephone ?? data.telephone, "[NullPassword1]", data.role);
+                await user.updateUser(userId);
+
+                return res.status(200).json({ message: "User successfully updated" });
+
+            } else throw new Error("The user are not a realtor");
+
+
+
+        } catch (err) {
+            return res.status(400).json({ error: (err as errors).message });
         }
     }
 }
