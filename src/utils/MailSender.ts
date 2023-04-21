@@ -16,12 +16,14 @@ export class MailSender {
         }
     });
 
-    public sendMail(to: string, name: string, token: string) {
-        this.trasport.sendMail({
+    public async sendMail(to: string, name: string, code: string) {
+        await this.trasport.sendMail({
             from: `Bryan Rocha <${process.env.USER_NODEMAILER}>`,
-            to: "bryangomesrocha@gmail.com",
-            subject: "Enviando email com node.js",
-            html: "<h1>Email enviado com node</h1>"
+            to: to,
+            subject: "Recuperação de senha",
+            html: `<h1>Olá ${name}, seu código é: ${code}</h1>`
+        }).catch((err) => {
+            console.error(err);
         });
     }
 }
