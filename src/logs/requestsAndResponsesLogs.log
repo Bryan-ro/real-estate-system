@@ -746,3 +746,1075 @@
 	]
 }
 [-] Response: 200 4.376 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 13:15:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"email": 1
+}
+[-] Response Body:
+{
+	"Error": "Token Expired"
+}
+[-] Response: 401 5.711 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 13:15:48 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2390.407 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 13:15:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"email": 1
+}
+[-] Response Body:
+{
+	"error": "Invalid email address. Please provide a valid email address in the format example@example.com."
+}
+[-] Response: 400 6.259 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 13:16:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"email": null
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 11.069 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name=Gu&email at Thu Apr 20 2023 13:16:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@gmail.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 5.850 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name=Gu&email at Thu Apr 20 2023 13:16:40 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@gmail.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 5.456 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name=Gu&email at Thu Apr 20 2023 13:16:41 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@gmail.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 4.628 ms 
+
+[-] Request: GET /managemanagement/users/get-all/realtor?name=Gu&email at Thu Apr 20 2023 13:16:41 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+			"name": "Gustavo Amorim",
+			"email": "gustavo@gmail.com",
+			"telephone": "1198398309",
+			"role": "REALTOR"
+		}
+	]
+}
+[-] Response: 200 4.238 ms 
+
+[-] Request: GET /managemanagement/users/get-all/user?name&telephone=1199 at Thu Apr 20 2023 13:18:06 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"Error": "Token Expired"
+}
+[-] Response: 401 1.444 ms 
+
+[-] Request: GET /managemanagement/users/get-all/user?name&telephone=1199 at Thu Apr 20 2023 13:18:09 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+			"name": "Lucas Hype",
+			"email": "lucas@gmail.com",
+			"telephone": "1199999999",
+			"role": "USER"
+		}
+	]
+}
+[-] Response: 200 5.311 ms 
+
+[-] Request: GET /managemanagement/users/get-all/user?name&telephone at Thu Apr 20 2023 13:18:14 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "11ee9cc5-4c45-4731-90b7-20f20f7d783e",
+			"name": "André",
+			"email": "mcandrerocha@gmail.com",
+			"telephone": "1195479942",
+			"role": "USER"
+		},
+		{
+			"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+			"name": "Lucas Hype",
+			"email": "lucas@gmail.com",
+			"telephone": "1199999999",
+			"role": "USER"
+		}
+	]
+}
+[-] Response: 200 4.013 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 13:18:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "mcandrerocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2277.487 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 13:18:38 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "mcandrerocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2275.167 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 13:18:50 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"email": null
+}
+[-] Response Body:
+{
+	"Error": "Not authorized."
+}
+[-] Response: 401 2.771 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 13:20:01 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"email": null
+}
+[-] Response Body:
+{
+	"Error": "Not authorized."
+}
+[-] Response: 401 2.753 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 13:20:04 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"email": null
+}
+[-] Response Body:
+{
+	"Error": "Invalid session token."
+}
+[-] Response: 400 1.229 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 13:20:42 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"email": null
+}
+[-] Response Body:
+{
+	"Error": "Not authorized."
+}
+[-] Response: 401 2.868 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 14:51:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "Token not provided."
+}
+[-] Response: 401 2.492 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 14:51:41 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"Error": "Not authorized."
+}
+[-] Response: 401 48.159 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 14:51:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2278.027 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 14:51:59 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "The 'userId' parameter is required and must be provided."
+}
+[-] Response: 400 78.454 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 14:58:06 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd12"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 400 9.247 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 14:59:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 400 44.177 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 14:59:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 400 5.420 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 14:59:27 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rocahaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 400 4.685 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 14:59:40 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "flksjflkjJDJS(#(123))",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 400 5.222 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:00:40 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 400 44.389 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:00:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc123",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 400 5.933 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:01:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc123",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 400 44.682 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:02:03 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 46.052 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:02:09 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd13"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 7.649 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:02:14 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd13"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 6.344 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:03:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "1198398309",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2275.172 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:03:38 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "1198398309",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2274.328 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:03:56 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2281.486 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:04:17 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2305.613 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:04:25 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2278.436 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:04:34 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd13"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 5.077 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:04:37 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 4.496 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:04:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 4.488 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:05:11 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 45.520 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:05:13 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 7.077 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:05:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 7.074 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:05:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 7.982 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:06:06 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2277.231 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:08:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 46.975 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:09:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 45.650 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:10:00 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2282.797 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:10:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 11.551 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:10:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2342.391 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:11:22 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2324.997 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:12:09 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd12"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2284.548 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:12:31 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2329.663 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:12:59 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2341.117 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:13:44 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2335.685 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:14:01 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2329.732 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:15:38 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2330.796 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:15:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2324.100 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:20:43 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2286.710 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 15:20:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 4562.215 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:21:00 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2284.860 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 15:21:08 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2299.925 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 16:48:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Rochaabc4",
+	"masterPassword": "qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2299.832 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 16:49:04 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Inicialacbb4",
+	"masterPassword": "qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2283.904 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 16:49:11 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Inicialacbb4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2288.700 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 16:49:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Inicialacbb4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 4575.847 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 16:50:06 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2278.027 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 16:50:50 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2327.216 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 16:50:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2283.863 ms 
+
+[-] Request: GET /managemanagement/users/get-all/user?name&telephone at Thu Apr 20 2023 18:04:29 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "11ee9cc5-4c45-4731-90b7-20f20f7d783e",
+			"name": "André",
+			"email": "mcandrerocha@gmail.com",
+			"telephone": "1195479942",
+			"role": "USER"
+		},
+		{
+			"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+			"name": "Lucas Hype",
+			"email": "lucas@gmail.com",
+			"telephone": "1199999999",
+			"role": "USER"
+		}
+	]
+}
+[-] Response: 200 49.852 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 18:04:55 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "11ee9cc5-4c45-4731-90b7-20f20f7d783e",
+	"name": "André Carlos da Rocha"
+}
+[-] Response Body:
+{
+	"Error": "Not authorized."
+}
+[-] Response: 401 4.140 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 18:05:01 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "11ee9cc5-4c45-4731-90b7-20f20f7d783e",
+	"name": "André Carlos da Rocha"
+}
+[-] Response Body:
+{
+	"Error": "Not authorized."
+}
+[-] Response: 401 3.523 ms 
+
+[-] Request: PUT /managemanagement/users/update-profile/realtor at Thu Apr 20 2023 18:05:06 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "11ee9cc5-4c45-4731-90b7-20f20f7d783e",
+	"name": "André Carlos da Rocha"
+}
+[-] Response Body:
+{
+	"error": "The user are not a realtor"
+}
+[-] Response: 400 4.859 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 18:06:42 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "11ee9cc5-4c45-4731-90b7-20f20f7d783e",
+	"newPassword": "Inicialacbb4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"error": "The user are not a realtor"
+}
+[-] Response: 400 45.824 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 20:16:40 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "11ee9cc5-4c45-4731-90b7-20f20f7d783e",
+	"newPassword": "Inicialacbb4",
+	"masterPassword": "Qweasd12"
+}
+[-] Response Body:
+{
+	"error": "The user are not a realtor"
+}
+[-] Response: 400 17.384 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 20:17:10 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Inicialacbb4",
+	"masterPassword": "Qweasd12"
+}
+[-] Response Body:
+{
+	"error": "Current password does not match"
+}
+[-] Response: 400 2295.758 ms 
+
+[-] Request: PUT /managemanagement/users/update-password/realtor at Thu Apr 20 2023 20:17:27 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"userId": "6008b36c-25c2-4151-b804-c61dd93ea5c8",
+	"newPassword": "Inicialacbb4",
+	"masterPassword": "Qweasd123"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 4581.962 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 23:27:07 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 56.919 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 23:27:14 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2.802 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 23:27:18 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2.454 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 23:27:27 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2.577 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 23:28:37 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2.017 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 23:28:38 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 1.910 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 23:28:46 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "gustavo@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2304.628 ms 
+
+[-] Request: POST /user/auth/login at Thu Apr 20 2023 23:29:06 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2295.754 ms 

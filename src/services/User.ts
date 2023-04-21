@@ -126,7 +126,7 @@ export class User extends UserPropsValidations {
         return data;
     }
 
-    public static async getOneUser(id: string) {
+    public static async getOneUserById(id: string) {
         const data = await prisma.user.findUnique({
             where: {
                 id
@@ -146,7 +146,7 @@ export class User extends UserPropsValidations {
 
     }
 
-    public async updateUser(id: string) {
+    public async updateUserProfile(id: string): Promise<void> {
         this._validadeUserProps();
 
         await prisma.user.update({
@@ -159,5 +159,29 @@ export class User extends UserPropsValidations {
                 telephone: this._telephone
             }
         });
+    }
+
+    public async updateUserPassword(masterId: string, masterPlainTextPassword: string): Promise<void> {
+        this._validadeUserProps();
+        const currentUserData = await prisma.user.findUnique({
+            where: {
+                id: masterId,
+            }
+        });
+
+        if(currentUserData) {
+            const validation = await auth.compare(masterPlainTextPassword, currentUserData.password);
+            if(!validation) throw new Error("Current password does not match");
+
+            await prisma.user.update({
+                where: {
+                    email: this._email
+                },
+                data: {
+                    password: await auth.hashPassword(this._password)
+                }
+            });
+        }
+
     }
 }

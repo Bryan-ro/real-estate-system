@@ -11,9 +11,9 @@ export class UserController {
     }
 
     private async _login(req: Request, res: Response) {
-        const { email, password } = req.body;
+        const { login, password } = req.body;
         try {
-            const data = await User.getUserByEmailOrTelephone(email);
+            const data = await User.getUserByEmailOrTelephone(login);
             if(data) {
                 const user = new User(data.name, data.email, data.telephone, password);
 
@@ -45,8 +45,5 @@ export class UserController {
             else return  res.status(500).json({ message: "Uncknow error" });
 
         }
-
-
-
     }
 }
