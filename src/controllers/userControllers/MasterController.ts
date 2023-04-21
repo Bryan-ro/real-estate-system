@@ -11,6 +11,7 @@ export class MasterController extends AuthMiddleware {
         router.get("/profile", this.verifyIfUserIsAuthenticated, this.verifyIfUserIsMaster, this._getUniqueUser);
         router.post("/create/realtor", this.verifyIfUserIsAuthenticated, this.verifyIfUserIsMaster, this._createRealtorUser);
         router.put("/update-profile/realtor", this.verifyIfUserIsAuthenticated, this.verifyIfUserIsMaster, this._updateRealtorPersonalInfos);
+        router.put("/update-password/realtor", this.verifyIfUserIsAuthenticated, this.verifyIfUserIsMaster, this._updateRealtorPassword);
         return router;
     }
 
@@ -68,7 +69,7 @@ export class MasterController extends AuthMiddleware {
 
         try {
             if(typeof userId === "string") {
-                const data = await User.getOneUser(userId);
+                const data = await User.getOneUserById(userId);
 
                 return res.status(200).json({ data });
 
@@ -83,17 +84,31 @@ export class MasterController extends AuthMiddleware {
         const { userId, name, email, telephone } = req.body;
 
         try {
-            const data = await User.getOneUser(userId);
+            const data = await User.getOneUserById(userId);
             if(data?.role === "REALTOR") {
                 const user = new User(name ?? data.name, email ?? data.email, telephone ?? data.telephone, "[NullPassword1]", data.role);
-                await user.updateUser(userId);
+                await user.updateUserProfile(userId);
 
                 return res.status(200).json({ message: "User successfully updated" });
 
             } else throw new Error("The user are not a realtor");
+        } catch (err) {
+            return res.status(400).json({ error: (err as errors).message });
+        }
+    }
 
+    private async _updateRealtorPassword(req: Request, res: Response) {
+        const { userId, newPassword, masterPassword } = req.body;
+        const { id } = req.user; // Master ID
+        try {
+            const userData = await User.getOneUserById(userId);
 
+            if (userData?.role === "REALTOR") {
+                const user = new User(userData.name, userData.email, userData.telephone, newPassword, "REALTOR");
+                await user.updateUserPassword(id, masterPassword);
 
+                return res.status(200).json({ message: "Password successfully updated." });
+            } else throw new Error("The user are not a realtor");
         } catch (err) {
             return res.status(400).json({ error: (err as errors).message });
         }
