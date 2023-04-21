@@ -15,6 +15,11 @@ export class MasterController extends AuthMiddleware {
         return router;
     }
 
+
+
+
+
+
     private async _createRealtorUser(req: Request, res: Response) {
         try {
             const { name, email, telephone, password } = req.body;

@@ -3,7 +3,7 @@ import { Request, Response, Router } from "express";
 import { PrismaClientKnownRequestError, PrismaClientValidationError } from "@prisma/client/runtime";
 const router = Router();
 
-export class UserController {
+export class AllUserController {
     public routes() {
         router.post("/create", this._createUser);
         router.post("/auth/login", this._login);
@@ -43,7 +43,10 @@ export class UserController {
             else if ((err as PrismaClientValidationError).message) return  res.status(406).json({ error: errorMessage });
 
             else return  res.status(500).json({ message: "Uncknow error" });
-
         }
+    }
+
+    private async requestPasswordChange (req: Request, res: Response) {
+        return "";
     }
 }

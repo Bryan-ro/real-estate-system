@@ -19,4 +19,10 @@ export class Auth {
     public verifyJwtToken(token: string) {
         return verify(token, process.env.JWT_TOKEN ?? "");
     }
+
+    public generateOtpCode() {
+        return Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000;
+
+    }
 }
+

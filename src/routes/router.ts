@@ -1,8 +1,8 @@
 import { MasterController } from "../controllers/userControllers/MasterController";
-import { UserController } from "../controllers/userControllers/UserController";
+import { AllUserController } from "../controllers/userControllers/AllUserController";
 import { Router } from "express";
 const Master = new MasterController();
-const User = new UserController();
+const User = new AllUserController();
 const router = Router();
 
 router.use("/managemanagement/users", Master.routes());
