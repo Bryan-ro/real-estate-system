@@ -15,11 +15,6 @@ export class MasterController extends AuthMiddleware {
         return router;
     }
 
-
-
-
-
-
     private async _createRealtorUser(req: Request, res: Response) {
         try {
             const { name, email, telephone, password } = req.body;
@@ -110,7 +105,7 @@ export class MasterController extends AuthMiddleware {
 
             if (userData?.role === "REALTOR") {
                 const user = new User(userData.name, userData.email, userData.telephone, newPassword, "REALTOR");
-                await user.updateUserPassword(id, masterPassword);
+                await user.updateLoggedUserPassword(id, masterPassword);
 
                 return res.status(200).json({ message: "Password successfully updated." });
             } else throw new Error("The user are not a realtor");

@@ -17,11 +17,13 @@ export class MailSender {
     });
 
     public async sendMail(to: string, name: string, code: string) {
+        const firstName = name.split(" ");
+
         await this.trasport.sendMail({
             from: `Bryan Rocha <${process.env.USER_NODEMAILER}>`,
             to: to,
             subject: "Recuperação de senha",
-            html: `<h1>Olá ${name}, seu código é: ${code}</h1>`
+            html: `<h1>Olá ${firstName[0]}, seu código de verificação é: ${code}</h1>`
         }).catch((err) => {
             console.error(err);
         });

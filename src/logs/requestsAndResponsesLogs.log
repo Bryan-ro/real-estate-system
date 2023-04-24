@@ -1818,3 +1818,1461 @@
 	"authorization": "[FILTERED]"
 }
 [-] Response: 200 2295.754 ms 
+
+[-] Request: POST /user/create at Sun Apr 23 2023 19:57:41 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"name": "Lucas Hype",
+	"email": "lucas@gmail.com",
+	"telephone": "1199999999",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 406 3.202 ms 
+
+[-] Request: POST /user/auth/login at Sun Apr 23 2023 19:58:04 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response: 404 1.417 ms 
+
+[-] Request: POST /user/all/auth/login at Sun Apr 23 2023 19:58:12 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2398.066 ms 
+
+[-] Request: POST /user/alll/auth/request-new-password at Sun Apr 23 2023 20:24:59 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response: 404 2.528 ms 
+
+[-] Request: POST /user/alll/auth/request-new-password at Sun Apr 23 2023 20:25:24 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response: 404 3.231 ms 
+
+[-] Request: POST /user/alll/auth/request-password at Sun Apr 23 2023 20:25:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response: 404 1.069 ms 
+
+[-] Request: POST /user/alll/auth/request-password at Sun Apr 23 2023 20:25:31 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response: 404 1.419 ms 
+
+[-] Request: POST /user/alll/auth/request-password at Sun Apr 23 2023 20:25:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response: 404 2.471 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:25:56 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 500 42.519 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:26:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 500 36.460 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:26:44 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 500 40.629 ms 
+
+[-] Request: POST /user/all/auth/login at Sun Apr 23 2023 20:32:08 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.cm",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 39.060 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:32:22 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "User does not exist"
+}
+[-] Response: 404 6.618 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:32:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "User does not exist"
+}
+[-] Response: 404 4.898 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:32:33 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Response Body:
+{
+	"error": "User does not exist"
+}
+[-] Response: 404 2.450 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:33:15 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"error": "User does not exist"
+}
+[-] Response: 404 2.666 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:33:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 43.810 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:34:25 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 45.203 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:35:01 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5888.068 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:36:16 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5043.453 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:40:01 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5436.062 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:40:18 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 6428.632 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:41:28 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5097.092 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:43:29 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5243.711 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:45:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 6020.940 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:45:50 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "11960976085"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5783.988 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 20:47:08 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5763.798 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:01:10 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5067.024 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:25:17 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {}
+}
+[-] Response: 200 2.184 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:25:22 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {}
+}
+[-] Response: 200 2.116 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:25:33 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5875.162 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:25:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {}
+}
+[-] Response: 200 0.563 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:25:36 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {}
+}
+[-] Response: 200 0.259 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:25:56 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {}
+}
+[-] Response: 200 0.374 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:26:36 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5792.385 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:26:38 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {
+		"code": {}
+	}
+}
+[-] Response: 200 0.961 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:26:40 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {
+		"code": {}
+	}
+}
+[-] Response: 200 0.539 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:26:42 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {
+		"code": {}
+	}
+}
+[-] Response: 200 0.405 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:26:48 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {
+		"code": {}
+	}
+}
+[-] Response: 200 0.322 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:26:55 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {
+		"code": {}
+	}
+}
+[-] Response: 200 0.298 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:27:16 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {
+		"code": {}
+	}
+}
+[-] Response: 200 0.294 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:27:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": null
+}
+[-] Response: 200 3.106 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:27:46 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": null
+}
+[-] Response: 200 0.989 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:27:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 6018.462 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:27:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"verificationCode": {
+		"code": {}
+	}
+}
+[-] Response: 200 2.607 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:28:16 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5138.143 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:28:17 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 3.281 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:28:55 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.350 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:29:03 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response: 200 3.780 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:29:05 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response: 200 0.913 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:29:07 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response: 200 0.752 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:29:14 GMT-0300, IP: ::1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+null
+[-] Response: 200 4.441 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:29:44 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+null
+[-] Response: 200 1.137 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:29:52 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5951.053 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:29:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 2.409 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:29:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 0.949 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:30:52 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response: - - ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:31:01 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:31:14 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5364.856 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:31:16 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 2.531 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:31:27 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 0.940 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:31:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 6246.927 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:31:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 3.289 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:31:54 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.112 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:31:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.345 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:31:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.157 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:32:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5897.198 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:32:26 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.242 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:34:48 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 6230.010 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:34:50 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 3.240 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:35:15 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5961.006 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:35:16 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 4.514 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:35:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5133.844 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:36:19 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 3.376 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:36:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.101 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:36:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.058 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:36:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.382 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:36:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.152 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Sun Apr 23 2023 21:36:22 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.149 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:37:54 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 6000.159 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:37:56 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 3.192 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:40:00 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.305 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:41:13 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5971.998 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:41:15 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 3.131 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:41:38 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:41:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 6009.443 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:41:49 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 2.689 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:42:29 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5583.951 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:42:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 3.119 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:43:08 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5444.051 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:43:10 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 3.024 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:43:11 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.423 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:43:17 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.038 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:46:08 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 6182.257 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:46:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 3.088 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:46:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 0.869 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:46:22 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.022 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:46:22 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.290 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:47:43 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5537.495 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:47:44 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 3.251 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:49:48 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5703.737 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:49:49 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+$2b$15$R9R36qFrpwz7LUvvonnia.RRaaRhkH3T2yH/q6GbRx.mjJ7C4sILK
+[-] Response: 200 1.563 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:50:26 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5590.245 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:50:27 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": {}
+}
+[-] Response: 200 1.247 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:52:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5806.051 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:52:37 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response: 200 0.989 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:53:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 5140.305 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:53:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": "$2b$15$nUOV3k.3WBR2aEyDz2lVPepBxZ/Cn65Mz9YsGRq7n1CPutwxyg2ya"
+}
+[-] Response: 200 1.086 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:54:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": "$2b$15$nUOV3k.3WBR2aEyDz2lVPepBxZ/Cn65Mz9YsGRq7n1CPutwxyg2ya"
+}
+[-] Response: 200 0.733 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:54:46 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": "$2b$15$nUOV3k.3WBR2aEyDz2lVPepBxZ/Cn65Mz9YsGRq7n1CPutwxyg2ya"
+}
+[-] Response: 200 0.461 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:54:48 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": "$2b$15$nUOV3k.3WBR2aEyDz2lVPepBxZ/Cn65Mz9YsGRq7n1CPutwxyg2ya"
+}
+[-] Response: 200 0.359 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:56:32 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 8089.046 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:56:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": "$2b$15$rKfU4KfauEIc4tdUwy1XD.nPR3dNmynWf1B22uXKXpyMA4mr1/ryq"
+}
+[-] Response: 200 0.998 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:56:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": "$2b$15$rKfU4KfauEIc4tdUwy1XD.nPR3dNmynWf1B22uXKXpyMA4mr1/ryq"
+}
+[-] Response: 200 0.545 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 21:57:46 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 7975.727 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:57:49 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": "$2b$15$OxvmkEB9NYSlq2AwHjol6.9IKl1Syw190H17HgGwnjnmHzrJEqCXy"
+}
+[-] Response: 200 0.983 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:57:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"code": "$2b$15$OxvmkEB9NYSlq2AwHjol6.9IKl1Syw190H17HgGwnjnmHzrJEqCXy"
+}
+[-] Response: 200 0.548 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 21:58:28 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response: 200 0.341 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 22:24:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "gustavovfamorim@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 7572.343 ms 
+
+[-] Request: POST /user/all/auth/change-password%27 at Sun Apr 23 2023 22:49:15 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response: 404 2.008 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:49:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"error": "Cannot read properties of null (reading 'code')"
+}
+[-] Response: 401 40.191 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:49:34 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "23984"
+}
+[-] Response Body:
+{
+	"error": "Cannot read properties of null (reading 'code')"
+}
+[-] Response: 401 2.635 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:49:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "23984"
+}
+[-] Response Body:
+{
+	"error": "Cannot read properties of null (reading 'code')"
+}
+[-] Response: 401 2.518 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:49:36 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "23984"
+}
+[-] Response Body:
+{
+	"error": "Cannot read properties of null (reading 'code')"
+}
+[-] Response: 401 1.948 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:49:37 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "23984"
+}
+[-] Response Body:
+{
+	"error": "Cannot read properties of null (reading 'code')"
+}
+[-] Response: 401 2.145 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 22:50:14 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 7935.629 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:50:29 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "414583"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2291.471 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:50:38 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "414582"
+}
+[-] Response Body:
+{
+	"error": "Invalid verification code."
+}
+[-] Response: 401 2282.959 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:50:44 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "414583"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2291.207 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 22:51:31 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 7468.274 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:51:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "414583"
+}
+[-] Response Body:
+{
+	"error": "Invalid verification code."
+}
+[-] Response: 401 2284.833 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:51:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "222152"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2281.753 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:51:55 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "222152"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2285.993 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 22:52:06 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 7627.735 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:52:11 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "222152"
+}
+[-] Response Body:
+{
+	"error": "Invalid verification code."
+}
+[-] Response: 401 2290.375 ms 
+
+[-] Request: POST /user/all/auth/change-password at Sun Apr 23 2023 22:52:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "743984"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2283.143 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 22:56:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 8486.119 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 22:57:03 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 8457.721 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 22:58:04 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.om"
+}
+[-] Response Body:
+{
+	"error": "User does not exist"
+}
+[-] Response: 404 4.337 ms 
+
+[-] Request: POST /user/all/auth/request-password at Sun Apr 23 2023 22:58:08 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response: - - ms 

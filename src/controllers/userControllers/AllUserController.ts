@@ -1,12 +1,15 @@
 import  { User } from "../../services/User";
+import { ServerCache } from "../../services/ServerCacheMethods";
 import { Request, Response, Router } from "express";
-import { PrismaClientKnownRequestError, PrismaClientValidationError } from "@prisma/client/runtime";
+const serverCache = new ServerCache();
 const router = Router();
+
 
 export class AllUserController {
     public routes() {
-        router.post("/create", this._createUser);
         router.post("/auth/login", this._login);
+        router.post("/auth/request-password", this._requestPasswordChange);
+        router.post("/auth/change-password", this._validateVerificationCode);
         return router;
     }
 
@@ -20,33 +23,54 @@ export class AllUserController {
                 const token = await user.login();
 
                 return res.status(200).json({ authorization: token });
-            }
+            } else throw new Error("Invalid credentials. Please check your login and password.");
         } catch (err) {
             const { message } = err as errors;
             res.status(401).json({ error: message });
         }
     }
 
-    private async _createUser(req: Request, res: Response) {
-        const { name, email, telephone, password } = req.body;
+    private async _requestPasswordChange (req: Request, res: Response) {
+        const { credentials } = req.body; // Email or telephone
+
         try {
-            const user = new User(name, email, telephone, password, "USER");
+            const user = await User.getUserByEmailOrTelephone(credentials);
+            if(user) {
+                await serverCache.putVerificationCode(user.email, user.name);
+                return res.status(200).json({ message: "The verification code has been sent to the email" });
+            } else throw new Error("User does not exist");
 
-            await user.createUser().then(() => {
-                return res.status(201).json({ message: "User successfully created." });
-            });
         } catch (err) {
-            const errorMessage = (err as PrismaClientValidationError).message;
+            let status = 500;
+            if((err as errors).message === "User does not exist") status = 404;
 
-            if ((err as PrismaClientKnownRequestError).code === "P2002") return res.status(409).json({ message: "This user already exists" });
+            return res.status(status).json({ error: (err as errors).message });
 
-            else if ((err as PrismaClientValidationError).message) return  res.status(406).json({ error: errorMessage });
-
-            else return  res.status(500).json({ message: "Uncknow error" });
         }
     }
 
-    private async requestPasswordChange (req: Request, res: Response) {
+    private async _validateVerificationCode(req: Request, res: Response) {
+        const { email, code } = req.body;
+
+        try {
+            const userData = await User.getUserByEmailOrTelephone(email);
+            if (!userData) throw new Error("Invalid email");
+
+            const validation = await serverCache.getVerificationCode(email, code, {
+                id: userData.id,
+                name: userData.name,
+                email: userData.email,
+                telephone: userData.telephone
+            });
+
+            res.status(200).json({ authorization: validation });
+
+        } catch (err) {
+            res.status(401).json({ error: (err as errors).message });
+        }
+    }
+
+    private async _changePassword(req: Request, res: Response) {
         return "";
     }
 }

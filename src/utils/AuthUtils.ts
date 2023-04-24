@@ -12,12 +12,20 @@ export class Auth {
         return await compare(password, hash);
     }
 
-    public generateJwtToken(payload: payloadProps): string {
-        return sign(payload, process.env.JWT_TOKEN ?? "", { expiresIn: "6h", algorithm: "HS512" });
+    public generateJwtTokenToLogin(payload: payloadProps): string {
+        return sign(payload, process.env.JWT_TOKEN_LOGIN ?? "", { expiresIn: "6h", algorithm: "HS512" });
     }
 
-    public verifyJwtToken(token: string) {
-        return verify(token, process.env.JWT_TOKEN ?? "");
+    public verifyJwtTokenToLogin(token: string) {
+        return verify(token, process.env.JWT_TOKEN_LOGIN ?? "");
+    }
+
+    public generateJwtTokenToPasswordRecovery(payload: payloadProps): string {
+        return sign(payload, process.env.JWT_TOKEN_PASSWORD_RECOVER ?? "", { expiresIn: "5m", algorithm: "HS512" });
+    }
+
+    public verifyJwtTokenToPasswordRecovery(token: string) {
+        return verify(token, process.env.JWT_TOKEN_PASSWORD_RECOVER ?? "");
     }
 
     public generateOtpCode() {

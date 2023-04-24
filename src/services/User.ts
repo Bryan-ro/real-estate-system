@@ -46,7 +46,7 @@ export class User extends UserPropsValidations {
             const compare: boolean = await auth.compare(this._password, data.password);
 
             if (compare) {
-                return auth.generateJwtToken({
+                return auth.generateJwtTokenToLogin({
                     id: data.id,
                     name: data.name,
                     email: data.email,
@@ -81,9 +81,7 @@ export class User extends UserPropsValidations {
                 role: true
             }
         });
-        if (!data) {
-            throw new Error("Invalid credentials. Please check your login and password.");
-        }
+
         return data;
     }
 
@@ -161,7 +159,7 @@ export class User extends UserPropsValidations {
         });
     }
 
-    public async updateUserPassword(masterId: string, masterPlainTextPassword: string): Promise<void> {
+    public async updateLoggedUserPassword(masterId: string, masterPlainTextPassword: string): Promise<void> {
         this._validadeUserProps();
         const currentUserData = await prisma.user.findUnique({
             where: {
@@ -182,6 +180,19 @@ export class User extends UserPropsValidations {
                 }
             });
         }
+    }
+
+    public async updateForgotUserPassword(masterId: string, masterPlainTextPassword: string): Promise<void> {
+        this._validadeUserProps();
+
+        await prisma.user.update({
+            where: {
+                email: this._email
+            },
+            data: {
+                password: await auth.hashPassword(this._password)
+            }
+        });
 
     }
 }

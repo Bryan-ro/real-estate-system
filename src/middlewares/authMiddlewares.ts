@@ -9,7 +9,7 @@ export abstract class AuthMiddleware {
 
         try {
             if (authorization) {
-                const validation = auth.verifyJwtToken(authorization) as payloadProps;
+                const validation = auth.verifyJwtTokenToLogin(authorization) as payloadProps;
                 if(validation) {
                     req.user = {
                         id: validation.id,
@@ -36,7 +36,7 @@ export abstract class AuthMiddleware {
         try {
             const user = await User.getUserByEmailOrTelephone(email);
 
-            if(user.id !== id) throw new Error("The user does not match.");
+            if(user?.id !== id) throw new Error("The user does not match.");
             if(user.role !== "MASTER") throw new Error("Not authorized.");
             if(user.role === "MASTER") return next();
 
@@ -46,8 +46,24 @@ export abstract class AuthMiddleware {
 
             return res.status(401).json({ Error: message });
         }
+    }
 
+    protected verifyTokenToChangePassword(req: Request, res: Response, next: NextFunction) {
+        const { authorization } = req.headers;
 
+        try {
+            if (authorization) {
+                const validation = auth.verifyJwtTokenToPasswordRecovery(authorization) as payloadProps;
+                if(validation) return next();
+                else throw Error("Token not provided.");
+            }
+        } catch (err) {
+            const { message } = err as errors;
 
+            if((err as JsonWebTokenError).name === "JsonWebTokenError") return res.status(400).json({ Error: "Invalid session token." });
+            if ((err as TokenExpiredError).name === "TokenExpiredError") return res.status(401).json({ Error: "Token Expired" });
+            else return res.status(401).json({ error: message });
+
+        }
     }
 }
