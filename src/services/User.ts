@@ -35,6 +35,7 @@ export class User extends UserPropsValidations {
         });
     }
 
+    
     public async login(): Promise<string | void> {
         const data = await prisma.user.findUnique({
             where: {
