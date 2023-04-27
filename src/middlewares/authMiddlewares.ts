@@ -3,6 +3,7 @@ import { JsonWebTokenError, TokenExpiredError } from "jsonwebtoken";
 import { User } from "../services/User";
 import { Auth } from "../utils/AuthUtils";
 const auth = new Auth();
+
 export abstract class AuthMiddleware {
     protected verifyIfUserIsAuthenticated(req: Request, res: Response, next: NextFunction) {
         const { authorization } = req.headers;
@@ -54,16 +55,22 @@ export abstract class AuthMiddleware {
         try {
             if (authorization) {
                 const validation = auth.verifyJwtTokenToPasswordRecovery(authorization) as payloadProps;
-                if(validation) return next();
-                else throw Error("Token not provided.");
-            }
+                if(validation) {
+                    req.user = {
+                        id: validation.id,
+                        email: validation.email,
+                        name: validation.name,
+                        telephone: validation.telephone
+                    };
+                    return next();
+                }
+            } else throw Error("Token not provided.");
         } catch (err) {
             const { message } = err as errors;
 
             if((err as JsonWebTokenError).name === "JsonWebTokenError") return res.status(400).json({ Error: "Invalid session token." });
             if ((err as TokenExpiredError).name === "TokenExpiredError") return res.status(401).json({ Error: "Token Expired" });
             else return res.status(401).json({ error: message });
-
         }
     }
 }

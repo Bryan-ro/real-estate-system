@@ -3396,3 +3396,281 @@ $2b$15$R9R36qFrpwz7LUvvonnia.RRaaRhkH3T2yH/q6GbRx.mjJ7C4sILK
 	"message": "The verification code has been sent to the email"
 }
 [-] Response: 200 8456.810 ms 
+
+[-] Request: POST /user/all/auth/verify-token at Wed Apr 26 2023 21:19:52 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "7439849"
+}
+[-] Response Body:
+{
+	"error": "Invalid email"
+}
+[-] Response: 401 96.539 ms 
+
+[-] Request: POST /user/all/auth/verify-token at Wed Apr 26 2023 21:19:54 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "7439849"
+}
+[-] Response Body:
+{
+	"error": "Invalid email"
+}
+[-] Response: 401 2.421 ms 
+
+[-] Request: POST /user/all/auth/verify-token at Wed Apr 26 2023 21:19:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "7439849"
+}
+[-] Response Body:
+{
+	"error": "Invalid email"
+}
+[-] Response: 401 2.244 ms 
+
+[-] Request: POST /user/all/auth/verify-token at Wed Apr 26 2023 21:20:18 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"email": "bryangomesrocha@gmail.com",
+	"code": "7439849"
+}
+[-] Response Body:
+{
+	"error": "Invalid email"
+}
+[-] Response: 401 2.084 ms 
+
+[-] Request: POST /user/all/auth/verify-token at Wed Apr 26 2023 21:20:29 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com",
+	"code": "7439849"
+}
+[-] Response Body:
+{
+	"error": "Cannot read properties of null (reading 'code')"
+}
+[-] Response: 401 10.477 ms 
+
+[-] Request: POST /user/all/auth/request-password at Wed Apr 26 2023 21:20:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "11960976085"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 8640.894 ms 
+
+[-] Request: POST /user/all/auth/verify-token at Wed Apr 26 2023 21:22:46 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com",
+	"code": "863204"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2282.054 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:28:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response: - - ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:28:34 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response: - - ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:28:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"Error": "Token Expired"
+}
+[-] Response: 401 5.369 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:29:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response: - - ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:30:01 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response: - - ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:30:07 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response: - - ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:32:18 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Token not provided."
+}
+[-] Response: 401 2.208 ms 
+
+[-] Request: POST /user/all/auth/request-password at Wed Apr 26 2023 21:47:03 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "11960976085"
+}
+[-] Response Body:
+{
+	"message": "The verification code has been sent to the email"
+}
+[-] Response: 200 7996.430 ms 
+
+[-] Request: POST /user/all/auth/verify-token at Wed Apr 26 2023 21:47:19 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com",
+	"code": "419923"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2289.618 ms 
+
+[-] Request: POST /user/all/auth/verify-token at Wed Apr 26 2023 21:47:37 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com",
+	"code": "419920"
+}
+[-] Response Body:
+{
+	"error": "Invalid verification code."
+}
+[-] Response: 401 2276.148 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:47:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid phone number. Please provide a valid phone number with a minimum length of 10 digits."
+}
+[-] Response: 401 3.561 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:49:05 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid password. Please provide a password that meets the following requirements: at least 8 characters, at least 1 uppercase letter, at least 1 digit, and no more than 3 consecutive characters that are letters or digits."
+}
+[-] Response: 401 6.062 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:49:19 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"message": "Password Successfully updated"
+}
+[-] Response: 200 2322.190 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:59:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"Error": "Token Expired"
+}
+[-] Response: 401 2.052 ms 
+
+[-] Request: POST /user/all/auth/login at Wed Apr 26 2023 21:59:29 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.cm",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 5.445 ms 
+
+[-] Request: POST /user/all/auth/login at Wed Apr 26 2023 21:59:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.cm",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2.327 ms 
+
+[-] Request: POST /user/all/auth/login at Wed Apr 26 2023 21:59:42 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2286.105 ms 
+
+[-] Request: POST /user/all/auth/login at Wed Apr 26 2023 21:59:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2284.991 ms 
+
+[-] Request: PUT /user/all/auth/change-password at Wed Apr 26 2023 21:59:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.1.0
+[-] Request Body:
+{
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"Error": "Invalid session token."
+}
+[-] Response: 400 1.291 ms 

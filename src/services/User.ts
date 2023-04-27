@@ -35,7 +35,7 @@ export class User extends UserPropsValidations {
         });
     }
 
-    
+
     public async login(): Promise<string | void> {
         const data = await prisma.user.findUnique({
             where: {
@@ -183,8 +183,8 @@ export class User extends UserPropsValidations {
         }
     }
 
-    public async updateForgotUserPassword(masterId: string, masterPlainTextPassword: string): Promise<void> {
-        this._validadeUserProps();
+    public async updateForgotUserPassword(): Promise<void> {
+        this.validatePassword(this._password);
 
         await prisma.user.update({
             where: {
