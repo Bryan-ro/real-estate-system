@@ -160,16 +160,16 @@ export class User extends UserPropsValidations {
         });
     }
 
-    public async updateLoggedUserPassword(masterId: string, masterPlainTextPassword: string): Promise<void> {
+    public async updateLoggedUserPassword(userOrMasterId: string, masterOrUserPlainTextPassword: string): Promise<void> {
         this._validadeUserProps();
         const currentUserData = await prisma.user.findUnique({
             where: {
-                id: masterId,
+                id: userOrMasterId,
             }
         });
 
         if(currentUserData) {
-            const validation = await auth.compare(masterPlainTextPassword, currentUserData.password);
+            const validation = await auth.compare(masterOrUserPlainTextPassword, currentUserData.password);
             if(!validation) throw new Error("Current password does not match");
 
             await prisma.user.update({

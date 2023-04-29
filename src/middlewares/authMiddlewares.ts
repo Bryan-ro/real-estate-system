@@ -14,7 +14,9 @@ export abstract class AuthMiddleware {
                 if(validation) {
                     req.user = {
                         id: validation.id,
-                        email: validation.email
+                        email: validation.email,
+                        name: validation.name,
+                        telephone: validation.telephone
                     };
 
                     return next();

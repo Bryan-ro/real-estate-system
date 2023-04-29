@@ -3674,3 +3674,291 @@ $2b$15$R9R36qFrpwz7LUvvonnia.RRaaRhkH3T2yH/q6GbRx.mjJ7C4sILK
 	"Error": "Invalid session token."
 }
 [-] Response: 400 1.291 ms 
+
+[-] Request: PUT /user/all/profile/change-password at Sat Apr 29 2023 00:09:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"error": "Token not provided."
+}
+[-] Response: 401 2.823 ms 
+
+[-] Request: POST /user/all/auth/login at Sat Apr 29 2023 00:09:52 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "6584761335",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2415.476 ms 
+
+[-] Request: POST /user/all/auth/login at Sat Apr 29 2023 00:10:00 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "6584761335",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2278.782 ms 
+
+[-] Request: PUT /user/all/profile/change-password at Sat Apr 29 2023 00:10:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"message": "Invalid User."
+}
+[-] Response: 401 3.011 ms 
+
+[-] Request: PUT /user/all/profile/change-password at Sat Apr 29 2023 00:10:29 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"message": "Invalid User."
+}
+[-] Response: 401 1.468 ms 
+
+[-] Request: PUT /user/all/profile/change-password at Sat Apr 29 2023 00:11:34 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"message": "Invalid User."
+}
+[-] Response: 401 1.333 ms 
+
+[-] Request: PUT /user/all/profile/change-password at Sat Apr 29 2023 00:12:26 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"currentPassword": "Giselly1315",
+	"newPassword": "Inicialacbb4"
+}
+[-] Response Body:
+{
+	"message": "Invalid User."
+}
+[-] Response: 401 1.892 ms 
+
+[-] Request: PUT /user/all/profile/change-password at Sat Apr 29 2023 00:12:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"currentPassword": "Giselly1315",
+	"newPassword": "Inicialacbb4"
+}
+[-] Response Body:
+{
+	"message": "Invalid User."
+}
+[-] Response: 401 6.283 ms 
+
+[-] Request: PUT /user/all/profile/change-password at Sat Apr 29 2023 00:14:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"currentPassword": "Giselly1315",
+	"newPassword": "Inicialacbb4"
+}
+[-] Response Body:
+{
+	"message": "Invalid User."
+}
+[-] Response: 401 6.188 ms 
+
+[-] Request: PUT /user/all/profile/change-password at Sat Apr 29 2023 00:15:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"currentPassword": "Giselly1315",
+	"newPassword": "Inicialacbb4"
+}
+[-] Response Body:
+{
+	"message": "Password successfully updated."
+}
+[-] Response: 200 4621.368 ms 
+
+[-] Request: POST /user/all/auth/login at Sat Apr 29 2023 00:15:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "6584761335",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2277.256 ms 
+
+[-] Request: POST /user/all/auth/login at Sat Apr 29 2023 00:15:40 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "6584761335",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2306.042 ms 
+
+[-] Request: PUT /user/all/profile/update-personalInfos at Sat Apr 29 2023 00:35:36 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"error": "Token not provided."
+}
+[-] Response: 401 2.558 ms 
+
+[-] Request: PUT /user/all/profile/update-personalInfos at Sat Apr 29 2023 00:35:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 43.648 ms 
+
+[-] Request: PUT /user/all/profile/update-personalInfos at Sat Apr 29 2023 00:35:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 5.295 ms 
+
+[-] Request: PUT /user/all/profile/update-personalInfos at Sat Apr 29 2023 00:35:54 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 4.167 ms 
+
+[-] Request: GET /managemanagement/users/get-all/user?name&telephone at Sat Apr 29 2023 00:37:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"Error": "Invalid session token."
+}
+[-] Response: 400 1.513 ms 
+
+[-] Request: GET /managemanagement/users/get-all/user?name&telephone at Sat Apr 29 2023 00:37:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"Error": "Invalid session token."
+}
+[-] Response: 400 1.550 ms 
+
+[-] Request: POST /user/all/auth/login at Sat Apr 29 2023 00:37:31 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2300.900 ms 
+
+[-] Request: POST /user/all/auth/login at Sat Apr 29 2023 00:37:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2283.671 ms 
+
+[-] Request: GET /managemanagement/users/get-all/user?name&telephone at Sat Apr 29 2023 00:38:02 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "11ee9cc5-4c45-4731-90b7-20f20f7d783e",
+			"name": "André",
+			"email": "mcandrerocha@gmail.com",
+			"telephone": "1195479942",
+			"role": "USER"
+		},
+		{
+			"id": "3196fc68-e9ba-4927-8c16-e8cf09a8d3b7",
+			"name": "Giselly Rodrigues Farias Gonçalves",
+			"email": "gisellyrodri7@gmail.com",
+			"telephone": "6584761335",
+			"role": "USER"
+		},
+		{
+			"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+			"name": "Lucas Hype",
+			"email": "lucas@gmail.com",
+			"telephone": "1199999999",
+			"role": "USER"
+		}
+	]
+}
+[-] Response: 200 6.584 ms 
+
+[-] Request: PUT /user/all/profile/update-personalInfos at Sat Apr 29 2023 00:39:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"newName": "Giselly Rodrigues Farias Rocha"
+}
+[-] Response Body:
+{
+	"message": "User successfully updated"
+}
+[-] Response: 200 6.074 ms 
+
+[-] Request: GET /managemanagement/users/get-all/user?name&telephone at Sat Apr 29 2023 00:39:34 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "11ee9cc5-4c45-4731-90b7-20f20f7d783e",
+			"name": "André",
+			"email": "mcandrerocha@gmail.com",
+			"telephone": "1195479942",
+			"role": "USER"
+		},
+		{
+			"id": "3196fc68-e9ba-4927-8c16-e8cf09a8d3b7",
+			"name": "Giselly Rodrigues Farias Rocha",
+			"email": "gisellyrodri7@gmail.com",
+			"telephone": "6584761335",
+			"role": "USER"
+		},
+		{
+			"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+			"name": "Lucas Hype",
+			"email": "lucas@gmail.com",
+			"telephone": "1199999999",
+			"role": "USER"
+		}
+	]
+}
+[-] Response: 200 5.550 ms 
+
+[-] Request: GET /managemanagement/users/get-all/user?name&telephone at Sat Apr 29 2023 00:39:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"data": [
+		{
+			"id": "11ee9cc5-4c45-4731-90b7-20f20f7d783e",
+			"name": "André",
+			"email": "mcandrerocha@gmail.com",
+			"telephone": "1195479942",
+			"role": "USER"
+		},
+		{
+			"id": "3196fc68-e9ba-4927-8c16-e8cf09a8d3b7",
+			"name": "Giselly Rodrigues Farias Rocha",
+			"email": "gisellyrodri7@gmail.com",
+			"telephone": "6584761335",
+			"role": "USER"
+		},
+		{
+			"id": "a9b23be6-6ea8-4bed-a19a-38b8ef8e9333",
+			"name": "Lucas Hype",
+			"email": "lucas@gmail.com",
+			"telephone": "1199999999",
+			"role": "USER"
+		}
+	]
+}
+[-] Response: 200 4.721 ms 

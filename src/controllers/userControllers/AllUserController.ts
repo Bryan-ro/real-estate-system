@@ -19,6 +19,8 @@ export class AllUserController extends AuthMiddleware{
         router.post("/auth/forgetpassword/request-token", this._requestPasswordChange);
         router.post("/auth/forgetpassword/verify-token", this._validateVerificationCode);
         router.put("/auth/forgetpassword/change-password", this.verifyTokenToChangePassword, this._changeForgottenPassword);
+        router.put("/profile/update-personalInfos", this.verifyIfUserIsAuthenticated, this._updatePersonalInfos);
+        router.put("/profile/change-password", this.verifyIfUserIsAuthenticated, this._changePassword);
         return router;
     }
 
@@ -108,10 +110,48 @@ export class AllUserController extends AuthMiddleware{
      *  - Os métodos abaixo são de configuração do perfil do usuário, onde o próprio usuário pode atualizar informações pessoais e senha, mas já estando logado na conta.
      */
 
-    private changePassword (req: Request, res: Response) {
-        const { id } = req.user;
+    private async _updatePersonalInfos(req: Request, res: Response) {
+        const { id, name, email, telephone } = req.user;
+        const { newName, newEmail, newTelephone } = req.body;
+
+        try {
+            if(name && email && telephone) {
+                const user = new User(newName ?? name, newEmail ?? email, newTelephone ?? telephone, "[NullPassword1]");
+                await user.updateUserProfile(id);
+
+                return res.status(200).json({ message: "User successfully updated" });
+
+            } else throw new Error("Invalid User");
+        } catch (err) {
+            return res.status(400).json({ error: (err as errors).message });
+        }
+    }
+
+    private async _changePassword (req: Request, res: Response) {
+        const { id, email, name, telephone } = req.user;
         const { currentPassword, newPassword } = req.body;
 
-        // Method to be fineshed.
+        try {
+            console.log(id, name, email, telephone);
+            if(name && email && telephone) {
+                const user = new User(name, email, telephone, newPassword);
+
+                await user.updateLoggedUserPassword(id, currentPassword);
+
+                return res.status(200).json({ message: "Password successfully updated." });
+            } else {
+                const error: errors = new Error("Invalid User.");
+                error.code = 401;
+                throw error;
+            }
+
+        } catch (err) {
+            let { code } = err as errors;
+
+            if(!code) {
+                code = 500;
+            }
+            return res.status(code).json({ message: (err as errors).message });
+        }
     }
 }
