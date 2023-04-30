@@ -4069,3 +4069,40 @@ $2b$15$R9R36qFrpwz7LUvvonnia.RRaaRhkH3T2yH/q6GbRx.mjJ7C4sILK
 	"Error": "Token Expired"
 }
 [-] Response: 498 2.061 ms 
+
+[-] Request: PUT /user/all/profile/update-personalInfos at Sat Apr 29 2023 23:40:09 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"newName": "Giselly Rodrigues Farias Rocha"
+}
+[-] Response Body:
+{
+	"Error": "Token Expired"
+}
+[-] Response: 401 5.435 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:40:17 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"Error": "Invalid session token."
+}
+[-] Response: 401 0.977 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:40:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"Error": "Invalid session token."
+}
+[-] Response: 401 1.589 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:40:26 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"userProfile": {
+		"id": "6ad8eadf-2e13-49c6-980c-8fb5dd88b980",
+		"name": "Bryan Gomes Rocha",
+		"email": "bryangomesrocha@gmail.com",
+		"telephone": "11960976085"
+	}
+}
+[-] Response: 200 38.719 ms 
