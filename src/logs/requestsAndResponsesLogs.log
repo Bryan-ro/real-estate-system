@@ -3962,3 +3962,110 @@ $2b$15$R9R36qFrpwz7LUvvonnia.RRaaRhkH3T2yH/q6GbRx.mjJ7C4sILK
 	]
 }
 [-] Response: 200 4.721 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:24:26 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response: 404 3.005 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:24:36 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response: 404 2.881 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:25:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response: 404 2.855 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:30:20 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"error": "Token not provided."
+}
+[-] Response: 401 2.601 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:30:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"error": "Token not provided."
+}
+[-] Response: 401 0.753 ms 
+
+[-] Request: POST /user/all/auth/login at Sat Apr 29 2023 23:30:38 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2345.799 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:30:48 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"user": {
+		"id": "6ad8eadf-2e13-49c6-980c-8fb5dd88b980",
+		"name": "Bryan Gomes Rocha",
+		"email": "bryangomesrocha@gmail.com",
+		"telephone": "11960976085",
+		"role": "MASTER"
+	}
+}
+[-] Response: 200 4.863 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:35:34 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"userProfile": {
+		"id": "6ad8eadf-2e13-49c6-980c-8fb5dd88b980",
+		"name": "Bryan Gomes Rocha",
+		"email": "bryangomesrocha@gmail.com",
+		"telephone": "11960976085"
+	}
+}
+[-] Response: 200 39.947 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:38:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"userProfile": {
+		"id": "6ad8eadf-2e13-49c6-980c-8fb5dd88b980",
+		"name": "Bryan Gomes Rocha",
+		"email": "bryangomesrocha@gmail.com",
+		"telephone": "11960976085"
+	}
+}
+[-] Response: 200 43.555 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:38:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"userProfile": {
+		"id": "6ad8eadf-2e13-49c6-980c-8fb5dd88b980",
+		"name": "Bryan Gomes Rocha",
+		"email": "bryangomesrocha@gmail.com",
+		"telephone": "11960976085"
+	}
+}
+[-] Response: 200 3.924 ms 
+
+[-] Request: GET /user/all/profile at Sat Apr 29 2023 23:39:26 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Response Body:
+{
+	"userProfile": {
+		"id": "6ad8eadf-2e13-49c6-980c-8fb5dd88b980",
+		"name": "Bryan Gomes Rocha",
+		"email": "bryangomesrocha@gmail.com",
+		"telephone": "11960976085"
+	}
+}
+[-] Response: 200 40.079 ms 
+
+[-] Request: PUT /user/all/profile/update-personalInfos at Sat Apr 29 2023 23:39:33 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"newName": "Giselly Rodrigues Farias Rocha"
+}
+[-] Response Body:
+{
+	"Error": "Token Expired"
+}
+[-] Response: 498 2.061 ms 

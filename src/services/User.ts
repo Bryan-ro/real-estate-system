@@ -137,7 +137,9 @@ export class User extends UserPropsValidations {
                 role: true
             }
         }).catch(() => {
-            throw new Error("The 'userId' parameter is required and must be provided.");
+            const error: errors = new Error("The 'userId' parameter is required and must be provided.");
+            error.code = 404;
+            throw error;
         });
 
         return data;

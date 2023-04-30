@@ -26,7 +26,7 @@ export abstract class AuthMiddleware {
         } catch (err) {
             const { message } = err as errors;
 
-            if((err as JsonWebTokenError).name === "JsonWebTokenError") return res.status(400).json({ Error: "Invalid session token." });
+            if((err as JsonWebTokenError).name === "JsonWebTokenError") return res.status(401).json({ Error: "Invalid session token." });
             if ((err as TokenExpiredError).name === "TokenExpiredError") return res.status(401).json({ Error: "Token Expired" });
             else return res.status(401).json({ error: message });
 

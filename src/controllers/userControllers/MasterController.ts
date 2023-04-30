@@ -73,10 +73,20 @@ export class MasterController extends AuthMiddleware {
 
                 return res.status(200).json({ data });
 
-            } else throw new Error("The 'userId' parameter is required and must be provided.");
+            } else {
+                const error: errors = new Error("The 'userId' parameter is required and must be provided.");
+                error.code = 400;
+                throw error;
+            }
 
         } catch (err) {
-            return res.status(500).json({ error: (err as errors).message });
+            let { code } = err as errors;
+
+            if(!code) {
+                code = 500;
+            }
+
+            return res.status(code).json({ error: (err as errors).message });
         }
     }
 

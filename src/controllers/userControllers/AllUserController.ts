@@ -15,10 +15,14 @@ export class AllUserController extends AuthMiddleware{
      *  - A classe AllUsersControllers, está definindo as rotas em comum para todos os usuarios, seja ele MASTER, REALTOR ou USER.
      */
     public routes() {
+        // Routes for login and forget password.
         router.post("/auth/login", this._login);
         router.post("/auth/forgetpassword/request-token", this._requestPasswordChange);
         router.post("/auth/forgetpassword/verify-token", this._validateVerificationCode);
         router.put("/auth/forgetpassword/change-password", this.verifyTokenToChangePassword, this._changeForgottenPassword);
+
+        // Router for profile config.
+        router.get("/profile", this.verifyIfUserIsAuthenticated, this._seeYourOwnProfileInfo);
         router.put("/profile/update-personalInfos", this.verifyIfUserIsAuthenticated, this._updatePersonalInfos);
         router.put("/profile/change-password", this.verifyIfUserIsAuthenticated, this._changePassword);
         return router;
@@ -104,11 +108,40 @@ export class AllUserController extends AuthMiddleware{
     }
     /*
      * English:
-     *  - The methods below are user profile setup, where the user himself can update personal information and passwords. But already logged into the account.
+     *  - The methods below are user profile setup, where the user himself can see and update personal information and passwords. But already logged into the account.
      *
      * Português:
      *  - Os métodos abaixo são de configuração do perfil do usuário, onde o próprio usuário pode atualizar informações pessoais e senha, mas já estando logado na conta.
      */
+
+    private async _seeYourOwnProfileInfo (req: Request, res: Response) {
+        const { id } = req.user;
+
+        if(!id) {
+            const error: errors = new Error("The 'id' parameter is required and must be provided.");
+            error.code = 400;
+            throw error;
+        }
+
+        try {
+            const user = await User.getOneUserById(id);
+            if(user) {
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                const { role, ...userProfile } = user; // Romove the role of user.
+
+                return res.status(200).json({ userProfile });
+            }
+        } catch (err) {
+            let { code } = err as errors;
+
+            if(!code) {
+                code = 500;
+            }
+
+            return res.status(code).json({ error: (err as errors).message });
+        }
+    }
+
 
     private async _updatePersonalInfos(req: Request, res: Response) {
         const { id, name, email, telephone } = req.user;
