@@ -63,7 +63,7 @@ model Adress {
 
 model Image {
   id         String   @id @default(uuid())
-  image      Bytes    @db.Blob
+  image      String
   Immobile   Immobile @relation(fields: [immobileId], references: [id])
   immobileId String
 
@@ -86,7 +86,7 @@ enum Roles {
 
 enum ImobilesCategory {
   HOUSE
-  APARTAMENT
+  APARTMENT
   GROUND
 }
 

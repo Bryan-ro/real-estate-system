@@ -196,6 +196,5 @@ export class User extends UserPropsValidations {
                 password: await auth.hashPassword(this._password)
             }
         });
-
     }
 }

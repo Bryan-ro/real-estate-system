@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calendário</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="//code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      var datasReservadas = ["2023-05-10", "2023-05-1", "2023-05-22"]; // datas/horários já reservados
+
+      $("#calendario").datepicker({
+        beforeShowDay: function(date) {
+          var stringData = $.datepicker.formatDate("yy-mm-dd", date); // converte a data para uma string no formato "yyyy-mm-dd"
+          if ($.inArray(stringData, datasReservadas) != -1) { // se a data estiver na lista de datas/horários reservados, desativa
+            return [false];
+          } else { // caso contrário, mantém ativo
+            return [true];
+          }
+        }
+      });
+
+      $("#horarios-disponiveis").on("change", function() {
+        // atualiza a lista de datas/horários reservados com a data/horário selecionado pelo usuário
+        var novaData = $("#calendario").datepicker("getDate");
+        var horario = $(this).val();
+        novaData.setHours(horario.substring(0, 2)); // obtém a hora do horário selecionado
+        novaData.setMinutes(horario.substring(3, 5)); // obtém o minuto do horário selecionado
+        var stringData = $.datepicker.formatDate("yy-mm-dd", novaData); // converte a data para uma string no formato "yyyy-mm-dd"
+        datasReservadas.push(stringData);
+      });
+    });
+  </script>
+</head>
+<body>
+  <input type="text" id="calendario">
+  <select id="horarios-disponiveis">
+    <option value="09:00">09:00</option>
+    <option value="10:00">10:00</option>
+    <option value="11:00">11:00</option>
+    <option value="14:00">14:00</option>
+    <option value="15:00">15:00</option>
+    <option value="16:00">16:00</option>
+  </select>
+</body>
+</html>

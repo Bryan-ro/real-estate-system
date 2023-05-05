@@ -5,6 +5,9 @@ declare namespace Express {
             email: string;
             name?: string;
             telephone?: string;
+        },
+        image: {
+            fileName: string;
         }
     }
 }
