@@ -251,3 +251,552 @@
 	"postalCode": "04805190"
 }
 [-] Response: - - ms 
+
+[-] Request: POST /immobiles/create-immobile at Fri May 05 2023 19:09:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /immobiles/create-immobile at Fri May 05 2023 19:14:02 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /immobiles/create-immobile at Fri May 05 2023 19:15:34 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /immobiles/create-immobile at Fri May 05 2023 19:15:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /immobiles/create-immobile at Fri May 05 2023 19:16:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /immobiles/create-immobile at Fri May 05 2023 19:17:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /immobiles/create-immobile at Fri May 05 2023 19:18:00 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /user/all/auth/login at Sat May 06 2023 13:35:25 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 77.051 ms 
+
+[-] Request: POST /user/all/auth/login at Sat May 06 2023 13:36:14 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 3.011 ms 
+
+[-] Request: POST /user/all/auth/login at Sat May 06 2023 13:36:25 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2.631 ms 
+
+[-] Request: POST /user/all/auth/forgetpassword/request-token at Sat May 06 2023 13:36:46 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"credentials": "bryangomesrocha@gmail.com"
+}
+[-] Response Body:
+{
+	"error": "User does not exist"
+}
+[-] Response: 404 2.237 ms 
+
+[-] Request: POST /user/all/auth/login at Sat May 06 2023 13:43:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 43.078 ms 
+
+[-] Request: POST /user/all/auth/login at Sat May 06 2023 13:43:31 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 5.170 ms 
+
+[-] Request: POST /user/all/auth/login at Sat May 06 2023 13:44:14 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"authorization": "[FILTERED]"
+}
+[-] Response: 200 2342.919 ms 
+
+[-] Request: POST /user/all/auth/login at Sat May 06 2023 13:44:56 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"login": "bryangomesrocha@gmail.com",
+	"password": "[FILTERED]"
+}
+[-] Response Body:
+{
+	"error": "Invalid credentials. Please check your login and password."
+}
+[-] Response: 401 2292.053 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:12:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:15:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 41.648 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:15:28 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 20.836 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:15:52 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 61.707 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:16:06 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 59.787 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:18:28 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: - - ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:18:34 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 40.119 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:28:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response Body:
+{
+	"message": "User successfully created"
+}
+[-] Response: 201 74.993 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:28:46 GMT-0300, IP: ::1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 43.508 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:29:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 38.657 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:29:40 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 42.390 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:29:48 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 47.266 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:29:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 43.413 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:30:06 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 43.918 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:30:23 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 45.521 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:30:56 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 46.730 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:31:02 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 44.192 ms 
+
+[-] Request: POST /immobiles/create-immobile at Sat May 06 2023 14:31:52 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.0
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120.00",
+	"quantBedrooms": "2.0",
+	"quantBathrooms": "3.0",
+	"description": "Teste",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "São Paulo",
+	"state": "SP",
+	"postalCode": "04805190"
+}
+[-] Response: 500 45.339 ms 

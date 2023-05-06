@@ -59,8 +59,11 @@ export class ImmobileController extends AuthMiddleware {
             );
 
             await immobile.createImmobile();
+
+            return res.status(201).json({ message: "Immobile successfully created" });
         } catch (err) {
-            console.log(err);
+            return 0;
+            // To be finished
         }
     }
 }
