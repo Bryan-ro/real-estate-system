@@ -1,18 +1,17 @@
 import { Request, Response, Router } from "express";
 import { Immobile } from "../../services/Immobile";
-import { AuthMiddleware } from "../../middlewares/authMiddlewares";
+import { AuthMiddleware } from "../../middlewares/AuthMiddlewares";
 import { upload } from "../../utils/multerConfig";
 const router = Router();
 
 export class ImmobileController extends AuthMiddleware {
     public routes() {
-        router.post("/create-immobile", upload.array("images", 5) ,this._createImmobile);
+        router.post("/create-immobile", upload.array("images", 5), this._createImmobile);
 
         return router;
     }
 
     private async _createImmobile (req: Request, res: Response) {
-
         const {
             contractType,
             category,
@@ -62,8 +61,7 @@ export class ImmobileController extends AuthMiddleware {
 
             return res.status(201).json({ message: "Immobile successfully created" });
         } catch (err) {
-            return 0;
-            // To be finished
+            res.json({ teste: "jkldfjç" });
         }
     }
 }

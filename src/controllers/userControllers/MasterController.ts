@@ -1,7 +1,7 @@
-import { User } from "../../services/User";
-import { AuthMiddleware } from "../../middlewares/authMiddlewares";
 import { Router, Request, Response } from "express";
 import { PrismaClientKnownRequestError, PrismaClientValidationError } from "@prisma/client/runtime";
+import { User } from "../../services/User";
+import { AuthMiddleware } from "../../middlewares/AuthMiddlewares";
 const router = Router();
 
 export class MasterController extends AuthMiddleware {

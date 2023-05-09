@@ -15,7 +15,8 @@
     },
     "plugins": [
         "@typescript-eslint",
-        "eslint-plugin-timbo-linter"
+        "eslint-plugin-timbo-linter",
+        "import"
     ],
     "rules": {
         "indent": [
@@ -48,6 +49,9 @@
         ],
         "timbo-linter/class": [
             2
+        ],
+        "import/order": [
+            "error"
         ]
     }
 }

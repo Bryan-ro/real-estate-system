@@ -1,6 +1,5 @@
-import { Request } from "express";
-import multer from "multer";
 import path from "path";
+import multer from "multer";
 import { v4 as uuid } from "uuid";
 
 const storage = multer.diskStorage({
@@ -17,13 +16,12 @@ const storage = multer.diskStorage({
 export const upload = multer({
     storage,
     limits: {
-        fileSize: 300 * 1024
+        fileSize: 1024 * 1024
     },
     fileFilter: (req, file, cb) => {
-        if(file.mimetype === "image/jpeg" || file.mimetype === "image/jpeg") {
+        if(file.mimetype === "image/png" || file.mimetype === "image/jpeg") {
             cb(null, true);
-        } else {
-            cb(new Error("Invalid type or size"));
-        }
+        } else cb(new Error("Invalid file format. The file must be in PNG or JPEG format."));
     }
 });
+

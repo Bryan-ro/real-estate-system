@@ -1,6 +1,6 @@
-import  { User } from "../../services/User";
 import { Request, Response, Router } from "express";
 import { PrismaClientKnownRequestError, PrismaClientValidationError } from "@prisma/client/runtime";
+import  { User } from "../../services/User";
 
 const router = Router();
 

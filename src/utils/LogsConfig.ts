@@ -1,6 +1,6 @@
-import { Application } from "express";
 import { createWriteStream } from "fs";
 import { join } from "path";
+import { Application } from "express";
 import morganBody from "morgan-body";
 
 export class Logs {

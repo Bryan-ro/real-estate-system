@@ -1,8 +1,8 @@
+import { Router } from "express";
 import { MasterController } from "../controllers/userControllers/MasterController";
 import { AllUserController } from "../controllers/userControllers/AllUserController";
 import { UserController } from "../controllers/userControllers/UserController";
 import { ImmobileController } from "../controllers/immobileControllers/ImmobileController";
-import { Router } from "express";
 const master = new MasterController();
 const allUser = new AllUserController();
 const user = new UserController();

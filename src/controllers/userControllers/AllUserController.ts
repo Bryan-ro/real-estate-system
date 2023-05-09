@@ -1,7 +1,7 @@
-import { User } from "../../services/User";
-import { AuthMiddleware } from "../../middlewares/authMiddlewares";
-import { ServerCache } from "../../services/ServerCacheMethods";
 import { Request, Response, Router } from "express";
+import { User } from "../../services/User";
+import { AuthMiddleware } from "../../middlewares/AuthMiddlewares";
+import { ServerCache } from "../../services/ServerCacheMethods";
 const serverCache = new ServerCache();
 const router = Router();
 
