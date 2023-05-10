@@ -41,7 +41,7 @@ export class AllUserController extends AuthMiddleware{
             } else throw new Error("Invalid credentials. Please check your login and password.");
         } catch (err) {
             const { message } = err as errors;
-            res.status(401).json({ error: message });
+            return res.status(401).json({ error: message });
         }
     }
 

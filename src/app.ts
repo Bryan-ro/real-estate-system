@@ -6,8 +6,8 @@ import { Logs } from "./utils/LogsConfig";
 
 const logs = new Logs();
 const app = express();
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/public", express.static(path.join(__dirname, "../public/images")));
 

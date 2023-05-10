@@ -20,6 +20,18 @@ export class Immobile {
         private _images: immobile.images[]
     ) { }
 
+    public static async getAdressByPostalCode(postalCode: string) {
+        const immobile = await prisma.adress.findMany({
+            where: {
+                postalCode: postalCode
+            }
+        });
+
+        return immobile;
+    }
+
+
+
     public async createImmobile(): Promise<void> {
         const adress = await prisma.adress.create({
             data: {
