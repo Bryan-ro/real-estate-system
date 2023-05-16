@@ -86,26 +86,26 @@ export class User extends UserPropsValidations {
         return data;
     }
 
-    public static async getOneTypeOfUsers(role: "USER" | "REALTOR", name?: string, email?: string, telephone?: string) {
+    public static async getOneTypeOfUsers(role: "USER" | "REALTOR", filter?: string) {
         const data = await prisma.user.findMany({
             where: {
                 AND: [
                     { role },
                     {
-                        AND: [
+                        OR: [
                             {
                                 email: {
-                                    contains: email
+                                    contains: filter
                                 }
                             },
                             {
                                 telephone: {
-                                    contains: telephone
+                                    contains: filter
                                 }
                             },
                             {
                                 name: {
-                                    contains: name
+                                    contains: filter
                                 }
                             }
                         ]

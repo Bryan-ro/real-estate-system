@@ -1,5 +1,6 @@
 export class ImmobilePropsValidation {
     public validations (
+        title: string,
         contractType: string,
         category: string,
         price: string,
@@ -16,6 +17,7 @@ export class ImmobilePropsValidation {
     ) {
         const errors: string[] = [];
 
+        errors.push(this.validateTitle(title) ?? "");
         errors.push(this.validateContractType(contractType) ?? "");
         errors.push(this.validateCategory(category) ?? "");
         errors.push(this.validatePrice(price) ?? "");
@@ -35,7 +37,13 @@ export class ImmobilePropsValidation {
         return errorsFilter;
     }
 
-    protected validateContractType(contractType: string) {
+    private validateTitle(title: string) {
+        if(!title || title.length > 50 || title.length < 5) {
+            return "The title must be at least 50 characters and more than 5";
+        }
+    }
+
+    private validateContractType(contractType: string) {
         const regex = /^(SALE|RENT)$/;
 
         if (!regex.test(contractType)) {

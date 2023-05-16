@@ -41,10 +41,10 @@ export class MasterController extends AuthMiddleware {
     }
 
     private async _viewAllRealtorUsers(req: Request, res: Response) {
-        const { name, email, telephone } = req.query;
+        const { search } = req.query;
 
         try {
-            const data = await User.getOneTypeOfUsers("REALTOR", name?.toString(), email?.toString(), telephone?.toString());
+            const data = await User.getOneTypeOfUsers("REALTOR", search?.toString());
 
             return res.status(200).json({ data });
         } catch (err) {
@@ -53,10 +53,10 @@ export class MasterController extends AuthMiddleware {
     }
 
     private async _viewAllUsers(req: Request, res: Response) {
-        const { name, email, telephone } = req.query;
+        const { search } = req.query;
 
         try {
-            const data = await User.getOneTypeOfUsers("USER", name?.toString(), email?.toString(), telephone?.toString());
+            const data = await User.getOneTypeOfUsers("USER", search?.toString());
 
             return res.status(200).json({ data });
         } catch (err) {

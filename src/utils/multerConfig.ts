@@ -1,10 +1,12 @@
 import path from "path";
 import multer from "multer";
 import { v4 as uuid } from "uuid";
+import dotenv from "dotenv";
+dotenv.config();
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, "../../public/images"));
+        cb(null, path.join(__dirname, `${process.env.IMAGE_URL}`));
     },
     filename: (req, file, cb) => {
         const ext = path.extname(file.originalname);
@@ -24,6 +26,4 @@ export const upload = multer({
         } else cb(new Error("Invalid file format. The file must be in PNG or JPEG format."));
     }
 });
-
-export const transform = multer();
 
