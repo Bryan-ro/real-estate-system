@@ -37,6 +37,31 @@ export class ImmobilePropsValidation {
         return errorsFilter;
     }
 
+    public validationsToUpdate (
+        title: string,
+        contractType: string,
+        category: string,
+        street: string,
+        city: string,
+        state: string,
+        postalCode: string
+    ) {
+        const errors: string[] = [];
+
+        errors.push(this.validateTitle(title) ?? "");
+        errors.push(this.validateContractType(contractType) ?? "");
+        errors.push(this.validateCategory(category) ?? "");
+        errors.push(this.validateStreet(street) ?? "");
+        errors.push(this.validateCity(city) ?? "");
+        errors.push(this.validateState(state) ?? "");
+        errors.push(this.validatePostalCode(postalCode) ?? "");
+
+        const errorsFilter = errors.filter(itens => itens !== "");
+
+        return errorsFilter;
+    }
+
+
     private validateTitle(title: string) {
         if(!title || title.length > 50 || title.length < 5) {
             return "The title must be at least 50 characters and more than 5";

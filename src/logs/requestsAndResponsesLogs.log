@@ -6773,3 +6773,1117 @@
 	}
 ]
 [-] Response: 200 40.949 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=2 at Tue May 16 2023 22:04:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "f7d26109-8d7a-4d91-af78-3db0744db514",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "d2ca3c61-b691-4019-96d7-99f75d9130ad",
+		"adressId": "67f48e33-3333-4018-97fc-fffd88b7aa6b",
+		"adress": {
+			"id": "67f48e33-3333-4018-97fc-fffd88b7aa6b",
+			"street": "Rua Marciano de Barros",
+			"number": 45,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "7e52f62a-bc4f-4615-b40e-ccaf96055380",
+				"image": "17c08500-4e28-4924-8e1f-c7f5c9adbebb.png",
+				"immobileId": "f7d26109-8d7a-4d91-af78-3db0744db514"
+			}
+		],
+		"property": {
+			"id": "d2ca3c61-b691-4019-96d7-99f75d9130ad",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Teste"
+		}
+	}
+]
+[-] Response: 200 76.083 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=t at Tue May 16 2023 22:05:05 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "f7d26109-8d7a-4d91-af78-3db0744db514",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "d2ca3c61-b691-4019-96d7-99f75d9130ad",
+		"adressId": "67f48e33-3333-4018-97fc-fffd88b7aa6b",
+		"adress": {
+			"id": "67f48e33-3333-4018-97fc-fffd88b7aa6b",
+			"street": "Rua Marciano de Barros",
+			"number": 45,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "7e52f62a-bc4f-4615-b40e-ccaf96055380",
+				"image": "17c08500-4e28-4924-8e1f-c7f5c9adbebb.png",
+				"immobileId": "f7d26109-8d7a-4d91-af78-3db0744db514"
+			}
+		],
+		"property": {
+			"id": "d2ca3c61-b691-4019-96d7-99f75d9130ad",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Teste"
+		}
+	}
+]
+[-] Response: 200 5.792 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Tue May 16 2023 22:05:12 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "a4d883a2-cc86-4d10-856c-2b01b9572187",
+		"title": "Olaaaa",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "7956d7f1-05b5-4df3-8200-e4da26c00152",
+		"adressId": "54be31f3-7364-4146-b148-0232bf7ed852",
+		"adress": {
+			"id": "54be31f3-7364-4146-b148-0232bf7ed852",
+			"street": "Rua Padre Lourenco Liebana",
+			"number": 42,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "04805190"
+		},
+		"images": [
+			{
+				"id": "60101316-65b6-40bf-aed2-fcfef5dd5c41",
+				"image": "4cfa402a-bd1b-4bec-9f8c-d44ff76adb14.png",
+				"immobileId": "a4d883a2-cc86-4d10-856c-2b01b9572187"
+			}
+		],
+		"property": {
+			"id": "7956d7f1-05b5-4df3-8200-e4da26c00152",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Teste"
+		}
+	},
+	{
+		"id": "f7d26109-8d7a-4d91-af78-3db0744db514",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights
+...
+[-] Response: 200 5.192 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=tes at Tue May 16 2023 22:05:28 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "f7d26109-8d7a-4d91-af78-3db0744db514",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "d2ca3c61-b691-4019-96d7-99f75d9130ad",
+		"adressId": "67f48e33-3333-4018-97fc-fffd88b7aa6b",
+		"adress": {
+			"id": "67f48e33-3333-4018-97fc-fffd88b7aa6b",
+			"street": "Rua Marciano de Barros",
+			"number": 45,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "7e52f62a-bc4f-4615-b40e-ccaf96055380",
+				"image": "17c08500-4e28-4924-8e1f-c7f5c9adbebb.png",
+				"immobileId": "f7d26109-8d7a-4d91-af78-3db0744db514"
+			}
+		],
+		"property": {
+			"id": "d2ca3c61-b691-4019-96d7-99f75d9130ad",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Teste"
+		}
+	}
+]
+[-] Response: 200 4.102 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=Marciano at Tue May 16 2023 22:06:16 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "f7d26109-8d7a-4d91-af78-3db0744db514",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "d2ca3c61-b691-4019-96d7-99f75d9130ad",
+		"adressId": "67f48e33-3333-4018-97fc-fffd88b7aa6b",
+		"adress": {
+			"id": "67f48e33-3333-4018-97fc-fffd88b7aa6b",
+			"street": "Rua Marciano de Barros",
+			"number": 45,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "7e52f62a-bc4f-4615-b40e-ccaf96055380",
+				"image": "17c08500-4e28-4924-8e1f-c7f5c9adbebb.png",
+				"immobileId": "f7d26109-8d7a-4d91-af78-3db0744db514"
+			}
+		],
+		"property": {
+			"id": "d2ca3c61-b691-4019-96d7-99f75d9130ad",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Teste"
+		}
+	}
+]
+[-] Response: 200 5.053 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=Padre at Tue May 16 2023 22:06:21 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "a4d883a2-cc86-4d10-856c-2b01b9572187",
+		"title": "Olaaaa",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "7956d7f1-05b5-4df3-8200-e4da26c00152",
+		"adressId": "54be31f3-7364-4146-b148-0232bf7ed852",
+		"adress": {
+			"id": "54be31f3-7364-4146-b148-0232bf7ed852",
+			"street": "Rua Padre Lourenco Liebana",
+			"number": 42,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "04805190"
+		},
+		"images": [
+			{
+				"id": "60101316-65b6-40bf-aed2-fcfef5dd5c41",
+				"image": "4cfa402a-bd1b-4bec-9f8c-d44ff76adb14.png",
+				"immobileId": "a4d883a2-cc86-4d10-856c-2b01b9572187"
+			}
+		],
+		"property": {
+			"id": "7956d7f1-05b5-4df3-8200-e4da26c00152",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Teste"
+		}
+	}
+]
+[-] Response: 200 4.053 ms 
+
+[-] Request: POST /immobiles/create-immobile at Tue May 16 2023 22:06:42 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Marciano de Barros",
+	"number": "45",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste 2"
+}
+[-] Response Body:
+{
+	"error": "Address already exists. We're sorry, but the address you provided is already associated with another property in our database. Please check your input and ensure that the address is unique. If you believe this is an error or if you have any further questions, please contact our support for assistance."
+}
+[-] Response: 409 11.626 ms 
+
+[-] Request: POST /immobiles/create-immobile at Tue May 16 2023 22:06:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Marciano de Barros",
+	"number": "43",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste 2"
+}
+[-] Response Body:
+{
+	"message": "Immobile successfully created"
+}
+[-] Response: 201 19.478 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Tue May 16 2023 22:06:52 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "37d52d4f-8c2c-4e2e-b001-347dad83ccac",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+		"adressId": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+		"adress": {
+			"id": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+			"street": "Rua Marciano de Barros",
+			"number": 43,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "912e7ec0-5ddb-4879-8cb1-9c998fdbf746",
+				"image": "f7be466d-e7aa-4986-b05b-9e3daa169c53.png",
+				"immobileId": "37d52d4f-8c2c-4e2e-b001-347dad83ccac"
+			}
+		],
+		"property": {
+			"id": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	},
+	{
+		"id": "a4d883a2-cc86-4d10-856c-2b01b9572187",
+		"title": "Olaaaa",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "
+...
+[-] Response: 200 5.267 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=3 at Tue May 16 2023 22:06:57 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response: 200 3.915 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=casa at Tue May 16 2023 22:07:02 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response: 200 3.502 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=te at Tue May 16 2023 22:07:06 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "37d52d4f-8c2c-4e2e-b001-347dad83ccac",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+		"adressId": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+		"adress": {
+			"id": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+			"street": "Rua Marciano de Barros",
+			"number": 43,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "912e7ec0-5ddb-4879-8cb1-9c998fdbf746",
+				"image": "f7be466d-e7aa-4986-b05b-9e3daa169c53.png",
+				"immobileId": "37d52d4f-8c2c-4e2e-b001-347dad83ccac"
+			}
+		],
+		"property": {
+			"id": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	},
+	{
+		"id": "f7d26109-8d7a-4d91-af78-3db0744db514",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": 
+...
+[-] Response: 200 4.354 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=te at Tue May 16 2023 22:07:25 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "37d52d4f-8c2c-4e2e-b001-347dad83ccac",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+		"adressId": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+		"adress": {
+			"id": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+			"street": "Rua Marciano de Barros",
+			"number": 43,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "912e7ec0-5ddb-4879-8cb1-9c998fdbf746",
+				"image": "f7be466d-e7aa-4986-b05b-9e3daa169c53.png",
+				"immobileId": "37d52d4f-8c2c-4e2e-b001-347dad83ccac"
+			}
+		],
+		"property": {
+			"id": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	},
+	{
+		"id": "a4d883a2-cc86-4d10-856c-2b01b9572187",
+		"title": "Olaaaa",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "
+...
+[-] Response: 200 43.758 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=3 at Tue May 16 2023 22:07:29 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "37d52d4f-8c2c-4e2e-b001-347dad83ccac",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+		"adressId": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+		"adress": {
+			"id": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+			"street": "Rua Marciano de Barros",
+			"number": 43,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "912e7ec0-5ddb-4879-8cb1-9c998fdbf746",
+				"image": "f7be466d-e7aa-4986-b05b-9e3daa169c53.png",
+				"immobileId": "37d52d4f-8c2c-4e2e-b001-347dad83ccac"
+			}
+		],
+		"property": {
+			"id": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	}
+]
+[-] Response: 200 6.071 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter=Grande at Tue May 16 2023 22:07:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "37d52d4f-8c2c-4e2e-b001-347dad83ccac",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+		"adressId": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+		"adress": {
+			"id": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+			"street": "Rua Marciano de Barros",
+			"number": 43,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "912e7ec0-5ddb-4879-8cb1-9c998fdbf746",
+				"image": "f7be466d-e7aa-4986-b05b-9e3daa169c53.png",
+				"immobileId": "37d52d4f-8c2c-4e2e-b001-347dad83ccac"
+			}
+		],
+		"property": {
+			"id": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	}
+]
+[-] Response: 200 5.050 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Tue May 16 2023 22:08:54 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "37d52d4f-8c2c-4e2e-b001-347dad83ccac",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+		"adressId": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+		"adress": {
+			"id": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+			"street": "Rua Marciano de Barros",
+			"number": 43,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "912e7ec0-5ddb-4879-8cb1-9c998fdbf746",
+				"image": "f7be466d-e7aa-4986-b05b-9e3daa169c53.png",
+				"immobileId": "37d52d4f-8c2c-4e2e-b001-347dad83ccac"
+			}
+		],
+		"property": {
+			"id": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	},
+	{
+		"id": "a4d883a2-cc86-4d10-856c-2b01b9572187",
+		"title": "Olaaaa",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "
+...
+[-] Response: 200 4.592 ms 
+
+[-] Request: GET /immobileImages/ at Wed May 17 2023 14:13:40 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0
+[-] Response: 404 1.410 ms 
+
+[-] Request: POST /immobiles/create-immobile at Wed May 17 2023 14:13:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Marciano de Barros",
+	"number": "43",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste 2"
+}
+[-] Response Body:
+{
+	"error": "Address already exists. We're sorry, but the address you provided is already associated with another property in our database. Please check your input and ensure that the address is unique. If you believe this is an error or if you have any further questions, please contact our support for assistance."
+}
+[-] Response: 409 76.038 ms 
+
+[-] Request: POST /immobiles/create-immobile at Wed May 17 2023 14:13:56 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Marciano de Barros",
+	"number": "41",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste 2"
+}
+[-] Response Body:
+{
+	"message": "Immobile successfully created"
+}
+[-] Response: 201 24.500 ms 
+
+[-] Request: GET /favicon.ico at Wed May 17 2023 14:14:06 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0
+[-] Response: 404 0.623 ms 
+
+[-] Request: POST /immobiles/create-immobile at Wed May 17 2023 15:23:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Marciano de Barros",
+	"number": "41",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste 2"
+}
+[-] Response Body:
+{
+	"error": "Address already exists. We're sorry, but the address you provided is already associated with another property in our database. Please check your input and ensure that the address is unique. If you believe this is an error or if you have any further questions, please contact our support for assistance."
+}
+[-] Response: 409 45.259 ms 
+
+[-] Request: POST /immobiles/create-immobile at Wed May 17 2023 15:23:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Marciano de Barros",
+	"number": "40",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste 2"
+}
+[-] Response Body:
+{
+	"message": "Immobile successfully created"
+}
+[-] Response: 201 17.183 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Wed May 17 2023 15:23:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "37d52d4f-8c2c-4e2e-b001-347dad83ccac",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+		"adressId": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+		"adress": {
+			"id": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+			"street": "Rua Marciano de Barros",
+			"number": 43,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "912e7ec0-5ddb-4879-8cb1-9c998fdbf746",
+				"image": "f7be466d-e7aa-4986-b05b-9e3daa169c53.png",
+				"immobileId": "37d52d4f-8c2c-4e2e-b001-347dad83ccac"
+			}
+		],
+		"property": {
+			"id": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	},
+	{
+		"id": "868bc229-cb82-4c63-93e2-df32da788cb1",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": 
+...
+[-] Response: 200 8.625 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Wed May 17 2023 15:24:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "37d52d4f-8c2c-4e2e-b001-347dad83ccac",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+		"adressId": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+		"adress": {
+			"id": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+			"street": "Rua Marciano de Barros",
+			"number": 43,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "912e7ec0-5ddb-4879-8cb1-9c998fdbf746",
+				"image": "f7be466d-e7aa-4986-b05b-9e3daa169c53.png",
+				"immobileId": "37d52d4f-8c2c-4e2e-b001-347dad83ccac"
+			}
+		],
+		"property": {
+			"id": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	},
+	{
+		"id": "868bc229-cb82-4c63-93e2-df32da788cb1",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": 
+...
+[-] Response: 200 44.397 ms 
+
+[-] Request: POST /immobiles/create-immobile at Wed May 17 2023 15:24:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Marciano de Barros",
+	"number": "40",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste 2"
+}
+[-] Response Body:
+{
+	"error": "Address already exists. We're sorry, but the address you provided is already associated with another property in our database. Please check your input and ensure that the address is unique. If you believe this is an error or if you have any further questions, please contact our support for assistance."
+}
+[-] Response: 409 9.150 ms 
+
+[-] Request: POST /immobiles/create-immobile at Wed May 17 2023 15:25:01 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Marciano de Barros",
+	"number": "20",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste 2"
+}
+[-] Response Body:
+{
+	"error": "At least one image is required"
+}
+[-] Response: 400 5.171 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Wed May 17 2023 15:35:36 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "37d52d4f-8c2c-4e2e-b001-347dad83ccac",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+		"adressId": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+		"adress": {
+			"id": "094d68bc-9906-41b3-8d4a-91f1a813f8b8",
+			"street": "Rua Marciano de Barros",
+			"number": 43,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "912e7ec0-5ddb-4879-8cb1-9c998fdbf746",
+				"image": "f7be466d-e7aa-4986-b05b-9e3daa169c53.png",
+				"immobileId": "37d52d4f-8c2c-4e2e-b001-347dad83ccac"
+			}
+		],
+		"property": {
+			"id": "6335106f-e94a-4fae-a68e-66194fb7b64c",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	},
+	{
+		"id": "868bc229-cb82-4c63-93e2-df32da788cb1",
+		"title": "Teste 2",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": 
+...
+[-] Response: 200 47.901 ms 
+
+[-] Request: POST /immobiles/create-immobile at Wed May 17 2023 15:37:05 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Marciano de Barros",
+	"number": "20",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste 2"
+}
+[-] Response Body:
+{
+	"error": "At least one image is required"
+}
+[-] Response: 400 9.418 ms 
+
+[-] Request: POST /immobiles/create-immobile at Wed May 17 2023 15:37:55 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste"
+}
+[-] Response Body:
+{
+	"error": [
+		"The 'street' field must only contain letters and spaces"
+	]
+}
+[-] Response: 400 5.004 ms 
+
+[-] Request: POST /immobiles/create-immobile at Wed May 17 2023 15:38:15 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Padre Lourenço Liebana",
+	"number": "45",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste"
+}
+[-] Response Body:
+{
+	"error": [
+		"The 'street' field must only contain letters and spaces"
+	]
+}
+[-] Response: 400 2.371 ms 
+
+[-] Request: POST /immobiles/create-immobile at Wed May 17 2023 15:38:22 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"contractType": "SALE",
+	"category": "HOUSE",
+	"price": "500.00",
+	"area": "120",
+	"quantBedrooms": "2",
+	"quantBathrooms": "3",
+	"description": "Casa grande com 3 banheiros ",
+	"street": "Rua Padre Lourenco Liebana",
+	"number": "45",
+	"city": "Sao Paulo",
+	"state": "SP",
+	"postalCode": "32514-313",
+	"title": "Teste"
+}
+[-] Response Body:
+{
+	"message": "Immobile successfully created"
+}
+[-] Response: 201 16.661 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Wed May 17 2023 15:38:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "b9335183-0720-4e39-9b48-049ed195ec93",
+		"title": "Teste",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "a90e193d-3c8f-4fc4-b462-51d196a58ff0",
+		"adressId": "5058c575-fd7f-4ee0-97da-9f4a06640c4c",
+		"adress": {
+			"id": "5058c575-fd7f-4ee0-97da-9f4a06640c4c",
+			"street": "Rua Padre Lourenco Liebana",
+			"number": 45,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "ccafcd9c-85d5-41cf-8f09-54359e33377b",
+				"image": "c25a17b4-9808-480d-aa28-4b6c565424b6.png",
+				"immobileId": "b9335183-0720-4e39-9b48-049ed195ec93"
+			}
+		],
+		"property": {
+			"id": "a90e193d-3c8f-4fc4-b462-51d196a58ff0",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	}
+]
+[-] Response: 200 4.885 ms 
+
+[-] Request: PUT /immobiles/update-immobile/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 17 2023 15:38:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+{
+	"error": [
+		"The title must be at least 50 characters and more than 5",
+		"The 'contractType' field must be 'SALE' or 'RENT'",
+		"The 'category' field must be 'HOUSE', 'APARTMENT', or 'GROUND'",
+		"The 'state' field must be a valid state abbreviation ('SP', 'BA', 'RJ')",
+		"The 'postalCode' field must be an 8-digit number"
+	]
+}
+[-] Response: 400 3.707 ms 
+
+[-] Request: PUT /immobiles/update-immobile/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 17 2023 15:45:05 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+{
+	"error": "Type of the fields price, area, quantBedrooms, quantBathrooms and number, must to be a number."
+}
+[-] Response: 400 39.600 ms 
+
+[-] Request: PUT /immobiles/update-immobile/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 17 2023 15:47:40 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+{
+	"error": "The tyoe if fields garage and highlights must to be boolean."
+}
+[-] Response: 400 39.239 ms 
+
+[-] Request: PUT /immobiles/update-immobile/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 17 2023 16:00:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+{
+	"message": "Immobile successfully updated."
+}
+[-] Response: 200 48.542 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Wed May 17 2023 16:00:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "b9335183-0720-4e39-9b48-049ed195ec93",
+		"title": "Teste",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "a90e193d-3c8f-4fc4-b462-51d196a58ff0",
+		"adressId": "5058c575-fd7f-4ee0-97da-9f4a06640c4c",
+		"adress": {
+			"id": "5058c575-fd7f-4ee0-97da-9f4a06640c4c",
+			"street": "Rua Padre Lourenco Liebana",
+			"number": 45,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "ccafcd9c-85d5-41cf-8f09-54359e33377b",
+				"image": "c25a17b4-9808-480d-aa28-4b6c565424b6.png",
+				"immobileId": "b9335183-0720-4e39-9b48-049ed195ec93"
+			}
+		],
+		"property": {
+			"id": "a90e193d-3c8f-4fc4-b462-51d196a58ff0",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	}
+]
+[-] Response: 200 9.519 ms 
+
+[-] Request: PUT /immobiles/update-immobile/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 17 2023 16:01:48 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"postalCOde": "04805-190"
+}
+[-] Response Body:
+{
+	"message": "Immobile successfully updated."
+}
+[-] Response: 200 6.879 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Wed May 17 2023 16:01:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Response Body:
+[
+	{
+		"id": "b9335183-0720-4e39-9b48-049ed195ec93",
+		"title": "Teste",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "a90e193d-3c8f-4fc4-b462-51d196a58ff0",
+		"adressId": "5058c575-fd7f-4ee0-97da-9f4a06640c4c",
+		"adress": {
+			"id": "5058c575-fd7f-4ee0-97da-9f4a06640c4c",
+			"street": "Rua Padre Lourenco Liebana",
+			"number": 45,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "32514313"
+		},
+		"images": [
+			{
+				"id": "ccafcd9c-85d5-41cf-8f09-54359e33377b",
+				"image": "c25a17b4-9808-480d-aa28-4b6c565424b6.png",
+				"immobileId": "b9335183-0720-4e39-9b48-049ed195ec93"
+			}
+		],
+		"property": {
+			"id": "a90e193d-3c8f-4fc4-b462-51d196a58ff0",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	}
+]
+[-] Response: 200 4.827 ms 
+
+[-] Request: PUT /immobiles/update-immobile/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 17 2023 16:02:02 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"postalCode": "04805-190"
+}
+[-] Response Body:
+{
+	"error": [
+		"The 'postalCode' field must be an 8-digit number"
+	]
+}
+[-] Response: 400 2.590 ms 
+
+[-] Request: PUT /immobiles/update-immobile/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 17 2023 16:03:43 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.1
+[-] Request Body:
+{
+	"postalCode": "04805-190"
+}
+[-] Response Body:
+{
+	"error": [
+		"The 'postalCode' field must be an 8-digit number"
+	]
+}
+[-] Response: 400 38.864 ms 

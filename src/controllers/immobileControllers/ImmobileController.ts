@@ -10,7 +10,7 @@ export class ImmobileController extends AuthMiddleware {
     public routes() {
         router.get("/view-immobiles", this._getImmobilesFiltered);
         router.post("/create-immobile", upload.array("images", 5), immobileMiddleware.validadeImmobileProps, this._createImmobile);
-
+        router.put("/update-immobile/:id", immobileMiddleware.validadeImmobilePropsToUpdate, this._updateImmobile);
 
         return router;
     }
@@ -76,11 +76,61 @@ export class ImmobileController extends AuthMiddleware {
                 imagesUrl
             );
 
+            if(imagesUrl.length < 1) return res.status(400).json({ error: "At least one image is required" });
+
             await immobile.createImmobile();
 
             return res.status(201).json({ message: "Immobile successfully created" });
         } catch (err) {
             res.status(500).json({ error: (err as errors).message });
         }
+    }
+
+    private async _updateImmobile (req: Request, res: Response) {
+        const id = req.params.id;
+
+        const {
+            title,
+            contractType,
+            category,
+            price,
+            highlights,
+            area,
+            quantBedrooms,
+            quantBathrooms,
+            garage,
+            description,
+            street,
+            number,
+            city,
+            state,
+            postalCode
+        } = req.immobile;
+        try {
+            const immobile = new Immobile(
+                title,
+                contractType,
+                category,
+                price,
+                highlights,
+                area,
+                quantBedrooms,
+                quantBathrooms,
+                garage,
+                description,
+                street,
+                number,
+                city,
+                state,
+                postalCode
+            );
+
+            await immobile.updateImmobile(id);
+
+            return res.status(200).json({ message: "Immobile successfully updated." });
+        } catch (err) {
+            return res.status(500).json({ error: "Uncknow error" });
+        }
+
     }
 }

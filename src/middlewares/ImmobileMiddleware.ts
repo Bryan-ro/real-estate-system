@@ -101,5 +101,77 @@ export class ImmobileMidleware {
         };
         return next();
     }
+
+
+
+    public async validadeImmobilePropsToUpdate (req: Request, res: Response, next: NextFunction) {
+        const id = req.params.id;
+        const {
+            title,
+            contractType,
+            category,
+            price,
+            highlights,
+            area,
+            quantBedrooms,
+            quantBathrooms,
+            garage,
+            description,
+            street,
+            number,
+            city,
+            state,
+            postalCode
+        } = req.body;
+
+        const filterPostalCode = postalCode.replace(/-/g, "");
+
+        const immobileProps = await Immobile.getImmobilesById(id);
+
+        if(!immobileProps) return res.status(400).json({ status: "This immobile does not exists." });
+
+        const validations = validateImmobile.validationsToUpdate(
+            title ?? immobileProps.title,
+            contractType ?? immobileProps.contractType,
+            category ?? immobileProps.category,
+            street ?? immobileProps.adress.street,
+            city ?? immobileProps.adress.city,
+            state ?? immobileProps.adress.state,
+            filterPostalCode ?? immobileProps.adress.postalCode
+        );
+
+        if(validations.length > 0) return res.status(400).json({ error: validations });
+
+        if(price || area || quantBedrooms || quantBathrooms || number) {
+            if(typeof price !== "number" || typeof area !== "number" || typeof quantBedrooms !== "number" || typeof quantBathrooms !== "number" || typeof number !== "number")
+                return res.status(400).json({ error: "Type of the fields price, area, quantBedrooms, quantBathrooms and number, must to be a number." });
+        }
+
+        if(garage || highlights) {
+            if(typeof garage !== "boolean" || typeof highlights !== "boolean") return res.status(400).json({ error: "The tyoe if fields garage and highlights must to be boolean." });
+        }
+
+
+        req.immobile = {
+            title: title ?? immobileProps.title,
+            contractType: contractType ?? immobileProps.contractType,
+            category: category ?? immobileProps.category,
+            price: price,
+            highlights: highlights ?? immobileProps.highlights,
+            area: area ?? immobileProps.property.area,
+            quantBedrooms: quantBathrooms ?? immobileProps.property.quantBedrooms,
+            quantBathrooms: quantBathrooms ?? immobileProps.property.quantBathrooms,
+            description: description ?? immobileProps.property.description,
+            garage: garage ?? immobileProps.property.garage,
+            street: street ?? immobileProps.adress.street,
+            number: number ?? immobileProps.adress.number,
+            city: city ?? immobileProps.adress.city,
+            state: state ?? immobileProps.adress.state,
+            postalCode: filterPostalCode ?? immobileProps.adress.postalCode
+        };
+
+
+        return next();
+    }
 }
 

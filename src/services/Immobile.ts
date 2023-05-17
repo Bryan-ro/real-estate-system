@@ -18,7 +18,7 @@ export class Immobile {
         private _city: string,
         private _state: string,
         private _postalCode: string,
-        private _images: immobile.images[]
+        private _images?: immobile.images[]
     ) {}
 
     public static async getAllImmobilesWithFilters(filter?: string) {
@@ -50,6 +50,13 @@ export class Immobile {
                                 contains: filter
                             }
                         }
+                    },
+                    {
+                        property: {
+                            description: {
+                                contains: filter
+                            }
+                        }
                     }
                 ]
             },
@@ -71,6 +78,20 @@ export class Immobile {
         });
 
         return address;
+    }
+
+    public static async getImmobilesById(id: string) {
+        const immobile = await prisma.immobile.findUnique({
+            where: {
+                id: id
+            },
+            include: {
+                adress: true,
+                property: true
+            }
+        });
+
+        return immobile;
     }
 
 
@@ -96,21 +117,56 @@ export class Immobile {
             }
         });
 
+        if(this._images) {
+            await prisma.immobile.create({
+                data: {
+                    title: this._title,
+                    contractType: this._contractType,
+                    category: this._category,
+                    price: this._price,
+                    highlights: this._highlights,
+                    adressId: adress.id,
+                    propertyId: property.id,
+                    images: {
+                        createMany: {
+                            data: this._images
+                        }
+                    }
+                }
+            });
+        }
+    }
 
-        await prisma.immobile.create({
+    public async updateImmobile(id: string) {
+        await prisma.immobile.update({
+            where: {
+                id
+            },
             data: {
                 title: this._title,
                 contractType: this._contractType,
                 category: this._category,
                 price: this._price,
                 highlights: this._highlights,
-                adressId: adress.id,
-                propertyId: property.id,
-                images: {
-                    createMany: {
-                        data: this._images
+                property: {
+                    update: {
+                        area: this._area,
+                        quantBedrooms: this._quantBedrooms,
+                        quantBathrooms: this._quantBathrooms,
+                        garage: this._garage,
+                        description: this._description
+                    }
+                },
+                adress: {
+                    update: {
+                        street: this._street,
+                        number: this._number,
+                        city: this._city,
+                        state: this._state,
+                        postalCode: this._postalCode
                     }
                 }
+
             }
         });
     }
