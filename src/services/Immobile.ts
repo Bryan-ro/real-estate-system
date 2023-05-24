@@ -170,4 +170,13 @@ export class Immobile {
             }
         });
     }
+
+    public static async addImageInImmobile(immobileId: string, image: string): Promise<void> {
+        await prisma.image.create({
+            data: {
+                image: image,
+                immobileId: immobileId,
+            }
+        });
+    }
 }

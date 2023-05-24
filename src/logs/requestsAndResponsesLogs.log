@@ -7887,3 +7887,113 @@
 	]
 }
 [-] Response: 400 38.864 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Wed May 24 2023 20:17:46 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.2
+[-] Response Body:
+[
+	{
+		"id": "b9335183-0720-4e39-9b48-049ed195ec93",
+		"title": "Deu certo",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "a90e193d-3c8f-4fc4-b462-51d196a58ff0",
+		"adressId": "5058c575-fd7f-4ee0-97da-9f4a06640c4c",
+		"adress": {
+			"id": "5058c575-fd7f-4ee0-97da-9f4a06640c4c",
+			"street": "Rua Padre Lourenco Liebana",
+			"number": 45,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "04805190"
+		},
+		"images": [
+			{
+				"id": "ccafcd9c-85d5-41cf-8f09-54359e33377b",
+				"image": "c25a17b4-9808-480d-aa28-4b6c565424b6.png",
+				"immobileId": "b9335183-0720-4e39-9b48-049ed195ec93"
+			}
+		],
+		"property": {
+			"id": "a90e193d-3c8f-4fc4-b462-51d196a58ff0",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	}
+]
+[-] Response: 200 135.672 ms 
+
+[-] Request: POST /immobiles/upload-newImage/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 24 2023 20:18:09 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.2
+[-] Response: 404 2.189 ms 
+
+[-] Request: POST /immobiles/upload-newImage/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 24 2023 20:18:25 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.2
+[-] Response: 404 2.642 ms 
+
+[-] Request: POST /immobiles/upload-newImage/ at Wed May 24 2023 20:18:28 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.2
+[-] Response Body:
+{
+	"error": "You need to upload one image"
+}
+[-] Response: 400 2.528 ms 
+
+[-] Request: POST /immobiles/upload-newImage/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 24 2023 20:18:45 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.2
+[-] Response: 404 0.926 ms 
+
+[-] Request: POST /immobiles/upload-newImage/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 24 2023 20:18:58 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.2
+[-] Response Body:
+{
+	"error": "You need to upload one image"
+}
+[-] Response: 400 2.707 ms 
+
+[-] Request: GET /immobiles/view-immobiles?filter at Wed May 24 2023 20:19:19 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.2
+[-] Response Body:
+[
+	{
+		"id": "b9335183-0720-4e39-9b48-049ed195ec93",
+		"title": "Deu certo",
+		"contractType": "SALE",
+		"category": "HOUSE",
+		"price": "500",
+		"highlights": false,
+		"propertyId": "a90e193d-3c8f-4fc4-b462-51d196a58ff0",
+		"adressId": "5058c575-fd7f-4ee0-97da-9f4a06640c4c",
+		"adress": {
+			"id": "5058c575-fd7f-4ee0-97da-9f4a06640c4c",
+			"street": "Rua Padre Lourenco Liebana",
+			"number": 45,
+			"city": "Sao Paulo",
+			"state": "SP",
+			"postalCode": "04805190"
+		},
+		"images": [
+			{
+				"id": "ccafcd9c-85d5-41cf-8f09-54359e33377b",
+				"image": "c25a17b4-9808-480d-aa28-4b6c565424b6.png",
+				"immobileId": "b9335183-0720-4e39-9b48-049ed195ec93"
+			}
+		],
+		"property": {
+			"id": "a90e193d-3c8f-4fc4-b462-51d196a58ff0",
+			"area": 120,
+			"quantBedrooms": 2,
+			"quantBathrooms": 3,
+			"garage": false,
+			"description": "Casa grande com 3 banheiros "
+		}
+	}
+]
+[-] Response: 200 44.771 ms 
+
+[-] Request: POST /immobiles/upload-newImage/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 24 2023 20:19:37 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.2
+[-] Response: 500 15.758 ms 
+
+[-] Request: POST /immobiles/upload-newImage/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 24 2023 20:20:11 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.2
+[-] Response: 500 6.902 ms 
+
+[-] Request: POST /immobiles/upload-newImage/b9335183-0720-4e39-9b48-049ed195ec93 at Wed May 24 2023 20:20:16 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: insomnia/2023.2.2
+[-] Response: 500 15.636 ms 

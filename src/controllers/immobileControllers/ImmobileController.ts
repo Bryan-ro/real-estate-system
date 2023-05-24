@@ -10,6 +10,7 @@ export class ImmobileController extends AuthMiddleware {
     public routes() {
         router.get("/view-immobiles", this._getImmobilesFiltered);
         router.post("/create-immobile", upload.array("images", 5), immobileMiddleware.validadeImmobileProps, this._createImmobile);
+        router.post("/upload-newImage/:id", upload.single("image"), this._addImageInImmobile);
         router.put("/update-immobile/:id", immobileMiddleware.validadeImmobilePropsToUpdate, this._updateImmobile);
 
         return router;
@@ -106,6 +107,7 @@ export class ImmobileController extends AuthMiddleware {
             state,
             postalCode
         } = req.immobile;
+
         try {
             const immobile = new Immobile(
                 title,
@@ -131,6 +133,24 @@ export class ImmobileController extends AuthMiddleware {
         } catch (err) {
             return res.status(500).json({ error: "Uncknow error" });
         }
+    }
+
+    private async _addImageInImmobile(req: Request, res: Response) {
+        const ImmobileId = req.params.id;
+
+        const image = req.file;
+
+        try {
+            if(!image) return res.status(400).json({ error: "You need to upload one image" });
+
+            await Immobile.addImageInImmobile(ImmobileId, image.toString());
+
+            return res.status(200).json({ message: "Image successfully uploaded" });
+        } catch (err) {
+            return res.status(500).json({ err });
+        }
+
+
 
     }
 }
